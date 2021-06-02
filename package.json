@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/i-am-a-soul/skill-blog/issues"
   },
-  "homepage": "https://github.com/i-am-a-soul/skill-blog#readme"
+  "homepage": "https://github.com/i-am-a-soul/skill-blog#readme",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
 }
