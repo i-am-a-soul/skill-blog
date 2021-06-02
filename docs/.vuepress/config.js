@@ -8,7 +8,7 @@ moment.locale('zh-cn')
 module.exports = {
     title: 'Skill Blog',
     description: 'Skill Blog',
-	base: '/Skill-blog/',
+	base: '/skill-blog/',
     head: [
         ['link', { rel: 'icon', href: '/img/favicon.png' }],
     ],
