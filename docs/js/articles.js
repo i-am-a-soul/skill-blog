@@ -1,8 +1,5 @@
 module.exports = {
-    getJsSidebar: () => [{
-        title: 'JS',
-        children: [
-            '',
-		],
-    }],
+    getJsSidebar: () => [
+		'',
+	],
 }

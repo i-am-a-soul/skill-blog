@@ -1,8 +1,5 @@
 module.exports = {
-    getHtmlSidebar: () => [{
-        title: 'HTML',
-        children: [
-            '',
-		],
-    }],
+    getHtmlSidebar: () => [
+        '',
+    ],
 }
