@@ -2,6 +2,7 @@ const { getHtmlSidebar } = require('../html/articles.js')
 const { getCssSidebar } = require('../css/articles.js')
 const { getJsSidebar } = require('../js/articles.js')
 const { getVueSidebar } = require('../vue/articles.js')
+const { getOthersSidebar } = require('../others/articles.js')
 const moment = require('moment')
 
 moment.locale('zh-cn')
@@ -47,6 +48,9 @@ module.exports = {
             text: 'Vue',
             link: '/vue/',
         }, {
+            text: '其他',
+            link: '/others/'
+        }, {
             text: 'Github',
             link: 'https://github.com/i-am-a-soul',
         }],
@@ -55,6 +59,7 @@ module.exports = {
             '/css/': getCssSidebar(),
             '/js/': getJsSidebar(),
             '/vue/': getVueSidebar(),
+            '/others/': getOthersSidebar(),
         },
         sidebarDepth: 2,
         lastUpdated: '最后修改于',
