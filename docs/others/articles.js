@@ -3,6 +3,7 @@ module.exports = {
         title: 'Webpack',
         children: [
             '',
+			'/others/webpack/module、chunk与bundle.md',
         ],
     }],
 }
