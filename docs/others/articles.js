@@ -4,6 +4,7 @@ module.exports = {
         children: [
             '',
 			'/others/webpack/module、chunk与bundle.md',
+			'/others/webpack/publicPath.md',
         ],
     }],
 }
