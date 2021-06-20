@@ -3,21 +3,39 @@
 ## 在浏览器中导入框架或库
 
 ```
-// 以 jQuery 为例
+// 以 jQuery 为例，在地址栏中输入
 data:text/html,<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 ```
 
 ## 查看引用的当前值
 
-```javascript
-JSON.parse(JSON.stringify(obj))
+```js{3}
+// 错误示例
+let a = [1, 2, 3]
+console.log(a)
+a.push(4)
+console.log(a)
 ```
+
+![](/skill-blog/img/0001.png)
+
+```js{3}
+// 正确示例
+let a = [1, 2, 3]
+console.log(JSON.parse(JSON.stringify(a)))
+a.push(4)
+console.log(a)
+```
+
+![](/skill-blog/img/0002.png)
+
+对象同理。
 
 ## 在循环中创建函数
 
 ### `var + `立即调用函数表达式（`IIFE`）
 
-```javascript
+```js
 var funcs = []
 
 for (var i = 0; i < 10; ++ i) {
@@ -39,7 +57,7 @@ funcs.forEach(function (func) {
 >
 >——《深入理解ES6》
 
-```javascript
+```js
 var funcs = []
 
 for (let i = 0; i < 10; ++ i) {
