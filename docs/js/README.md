@@ -71,6 +71,20 @@ funcs.forEach(function (func) {
 })
 ```
 
+## 为非同名局部变量赋值
+
+```js
+let node = {
+    type: "Identifier",
+    name: "foo",
+}
+
+let { type: localType, name: localName } = node
+
+console.log(localType) // "Identifier"
+console.log(localName) // "foo"
+```
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
