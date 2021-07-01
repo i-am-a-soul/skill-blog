@@ -19,3 +19,24 @@ public:
 };
 ```
 
+## `JZ2` 替换空格
+
+[链接](https://www.nowcoder.com/practice/0e26e5551f2b489b9f58bc83aa4b6c68)
+
+```cpp
+class Solution {
+public:
+    string replaceSpace (string s) {
+        string res = "";
+        for (int i = 0; i < s.size(); ++ i) {
+            if (s[i] == ' ') {
+                res += "%20";
+            } else {
+                res += s[i];
+            }
+        }
+        return res;
+    }
+};
+```
+
