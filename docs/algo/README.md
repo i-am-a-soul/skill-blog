@@ -208,3 +208,24 @@ public:
 };
 ```
 
+## `JZ11` 二进制中`1`的个数
+
+[链接](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)
+
+```cpp
+class Solution {
+    int lowbit (int x) {
+        return x & -x;
+    }
+public:
+    int NumberOf1 (int n) {
+        int res = 0;
+        while (n != 0) {
+            ++ res;
+            n -= lowbit(n);
+        }
+        return res;
+    }
+};
+```
+
