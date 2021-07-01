@@ -385,3 +385,32 @@ public:
 };
 ```
 
+## `JZ29` 最小的`K`个数
+
+[链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
+
+```cpp
+class Solution {
+public:
+    vector<int> GetLeastNumbers_Solution (vector<int> input, int k) {
+        if (input.size() < k || k == 0) return {};
+
+        priority_queue<int> pq;
+        for (int i = 0; i < k; ++ i) pq.push(input[i]);
+        for (int i = k; i < input.size(); ++ i) {
+            if (input[i] < pq.top()) {
+                pq.pop();
+                pq.push(input[i]);
+            }
+        }
+
+        vector<int> res;
+        while (!pq.empty()) {
+            res.push_back(pq.top());
+            pq.pop();
+        }
+        return res;
+    }
+};
+```
+
