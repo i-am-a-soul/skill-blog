@@ -186,3 +186,25 @@ public:
 };
 ```
 
+## `JZ10` 矩形覆盖
+
+[链接](https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6)
+
+```cpp
+class Solution {
+public:
+    int rectCover (int number) {
+        if (number == 0) return 0;
+        if (number == 1) return 1;
+
+        int res, a = 1, b = 1;
+        for (int i = 2; i <= number; ++ i) {
+            res = a + b;
+            a = b;
+            b = res;
+        }
+        return res;
+    }
+};
+```
+
