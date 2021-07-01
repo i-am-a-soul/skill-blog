@@ -69,3 +69,42 @@ public:
 };
 ```
 
+## `JZ4` 重建二叉树
+
+[链接](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)
+
+```cpp
+/**
+ * Definition for binary tree
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* reConstructBinaryTree (vector<int> pre, vector<int> vin) {
+        if (pre.size() == 0) return NULL;
+
+        TreeNode* cur = NULL;
+        for (int i = 0; i < vin.size(); ++ i) {
+            if (vin[i] == pre[0]) {
+                cur = new TreeNode(pre[0]);
+                cur -> left = reConstructBinaryTree(
+                    vector<int>(pre.begin() + 1, pre.begin() + i + 1),
+                    vector<int>(vin.begin(), vin.begin() + i)
+                );
+                cur -> right = reConstructBinaryTree(
+                    vector<int>(pre.begin() + i + 1, pre.end()),
+                    vector<int>(vin.begin() + i + 1, vin.end())
+                );
+                break;
+            }
+        }
+        return cur;
+    }
+};
+```
+
