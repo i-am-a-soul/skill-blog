@@ -55,6 +55,9 @@ module.exports = {
             text: '其他',
             link: '/others/'
         }, {
+            text: '算法（竞赛）',
+            link: 'https://i-am-a-soul.github.io/algorithm-blog/',
+        }, {
             text: 'Github',
             link: 'https://github.com/i-am-a-soul',
         }],
