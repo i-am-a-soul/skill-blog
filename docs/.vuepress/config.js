@@ -2,6 +2,7 @@ const { getHtmlSidebar } = require('../html/articles.js')
 const { getCssSidebar } = require('../css/articles.js')
 const { getJsSidebar } = require('../js/articles.js')
 const { getVueSidebar } = require('../vue/articles.js')
+const { getAlgoSidebar } = require('../algo/articles.js')
 const { getOthersSidebar } = require('../others/articles.js')
 const moment = require('moment')
 
@@ -48,6 +49,9 @@ module.exports = {
             text: 'Vue',
             link: '/vue/',
         }, {
+            text: '算法（面试）',
+            link: '/algo/',
+        }, {
             text: '其他',
             link: '/others/'
         }, {
@@ -59,6 +63,7 @@ module.exports = {
             '/css/': getCssSidebar(),
             '/js/': getJsSidebar(),
             '/vue/': getVueSidebar(),
+            '/algo/': getAlgoSidebar(),
             '/others/': getOthersSidebar(),
         },
         sidebarDepth: 2,
