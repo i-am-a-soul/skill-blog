@@ -108,3 +108,31 @@ public:
 };
 ```
 
+## `JZ5` 用两个栈实现队列
+
+[链接](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)
+
+![](/skill-blog/img/0005.bmp)
+
+```cpp
+class Solution {
+private:
+    stack<int> stack1, stack2;
+public:
+    void push (int node) {
+        stack2.push(node);
+    }
+    int pop () {
+        if (stack1.empty()) {
+            while (!stack2.empty()) {
+                stack1.push(stack2.top());
+                stack2.pop();
+            }
+        }
+        int res = stack1.top();
+        stack1.pop();
+        return res;
+    }
+};
+```
+
