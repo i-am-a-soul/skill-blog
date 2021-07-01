@@ -297,14 +297,61 @@ struct ListNode {
 class Solution {
 public:
     ListNode* ReverseList (ListNode* pHead) {
-        ListNode *prev = NULL, *cur = pHead;
+        ListNode *prev = NULL, *cur = pHead, *temp;
         while (cur != NULL) {
-            ListNode* temp = cur -> next;
+            temp = cur -> next;
             cur -> next = prev;
             prev = cur;
             cur = temp;
         }
         return prev;
+    }
+};
+```
+
+## `JZ16` 合并两个排序的链表
+
+[链接](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)
+
+```cpp
+/*
+struct ListNode {
+	int val;
+	struct ListNode *next;
+	ListNode(int x) :
+        val(x), next(NULL) {
+	}
+};*/
+class Solution {
+    ListNode *pHead = NULL, *temp;
+    void insert (ListNode* &ptr) {
+        temp = ptr -> next;
+        ptr -> next = pHead;
+        pHead = ptr;
+        ptr = temp;
+    }
+    ListNode* ReverseList (ListNode* pHead) {
+        ListNode *prev = NULL, *cur = pHead, *temp;
+        while (cur != NULL) {
+            temp = cur -> next;
+            cur -> next = prev;
+            prev = cur;
+            cur = temp;
+        }
+        return prev;
+    }
+public:
+    ListNode* Merge (ListNode* pHead1, ListNode* pHead2) {
+        while (pHead1 != NULL && pHead2 != NULL) {
+            if (pHead1 -> val < pHead2 -> val) {
+                insert(pHead1);
+            } else {
+                insert(pHead2);
+            }
+        }
+        while (pHead1 != NULL) insert(pHead1);
+        while (pHead2 != NULL) insert(pHead2);
+        return ReverseList(pHead);
     }
 };
 ```
