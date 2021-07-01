@@ -250,3 +250,34 @@ public:
 };
 ```
 
+## `JZ14` 链表中倒数最后`k`个结点
+
+[链接](https://www.nowcoder.com/practice/886370fe658f41b498d40fb34ae76ff9)
+
+```cpp
+/**
+ * struct ListNode {
+ *	int val;
+ *	struct ListNode *next;
+ *	ListNode(int x) : val(x), next(nullptr) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* FindKthToTail (ListNode* pHead, int k) {
+        ListNode *p1 = pHead, *p2 = pHead;
+
+        while (k --) {
+            if (p1 == NULL) return NULL;
+            p1 = p1 -> next;
+        }
+        
+        while (p1 != NULL) {
+            p1 = p1 -> next;
+            p2 = p2 -> next;
+        }
+        return p2;
+    }
+};
+```
+
