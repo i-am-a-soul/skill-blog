@@ -136,3 +136,40 @@ public:
 };
 ```
 
+## `JZ7` 斐波那契数列
+
+[链接](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)
+
+```cpp
+class Solution {
+public:
+    int Fibonacci (int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        
+        int res, a = 0, b = 1;
+        for (int i = 2; i <= n; ++ i) {
+            res = a + b;
+            a = b;
+            b = res;
+        }
+        return res;
+    }
+};
+```
+
+## `JZ8` 跳台阶
+
+[链接](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4)
+
+```cpp
+class Solution {
+public:
+    int jumpFloor (int number) {
+        if (number == 0 || number == 1) return 1;
+
+        return jumpFloor(number - 1) + jumpFloor(number - 2);
+    }
+};
+```
+
