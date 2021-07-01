@@ -414,6 +414,27 @@ public:
 };
 ```
 
+## `JZ33` 丑数
+
+[链接](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b)
+
+```cpp
+class Solution {
+public:
+    int GetUglyNumber_Solution (int index) {
+        vector<int> res = { 0, 1 };
+        int a = 1, b = 1, c = 1;
+        for (int i = 2; i <= index; ++ i) {
+            res.push_back(min(res[a] * 2, min(res[b] * 3, res[c] * 5)));
+            if (res.back() == res[a] * 2) ++ a;
+            if (res.back() == res[b] * 3) ++ b;
+            if (res.back() == res[c] * 5) ++ c;
+        }
+        return res[index];
+    }
+};
+```
+
 ## `JZ35` 数组中的逆序对
 
 [链接](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5)
@@ -444,7 +465,7 @@ class Solution {
         return res;
     }
 public:
-    int InversePairs(vector<int> data) {
+    int InversePairs (vector<int> data) {
         return merge_sort(0, (int)data.size() - 1, data);
     }
 };
