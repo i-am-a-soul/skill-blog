@@ -450,3 +450,26 @@ public:
 };
 ```
 
+## `JZ64` 滑动窗口的最大值
+
+[链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
+
+```cpp
+class Solution {
+public:
+    vector<int> maxInWindows (const vector<int>& num, unsigned int k) {
+        if (k > num.size()) return {};
+        
+        deque<int> dq;
+        vector<int> res;
+        for (int i = 0; i < num.size(); ++ i) {
+            if (!dq.empty() && i - dq.front() + 1 > k) dq.pop_front();
+            while (!dq.empty() && num[dq.back()] <= num[i]) dq.pop_back();
+            dq.push_back(i);
+            if (i >= k - 1) res.push_back(num[dq.front()]);
+        }
+        return res;
+    }
+};
+```
+
