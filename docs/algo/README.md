@@ -356,3 +356,32 @@ public:
 };
 ```
 
+## `JZ20` 包含`min`函数的栈
+
+[链接](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)
+
+```cpp
+class Solution {
+    struct node {
+        int val, history_min_val;
+    };
+    stack<node> s;
+public:
+    void push (int value) {
+        s.push({
+            value,
+            s.empty() ? value : std::min(min(), value)
+        });
+    }
+    void pop () {
+        s.pop();
+    }
+    int top () {
+        return s.top().val;
+    }
+    int min () {
+        return s.top().history_min_val;
+    }
+};
+```
+
