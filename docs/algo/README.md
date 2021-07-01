@@ -40,3 +40,32 @@ public:
 };
 ```
 
+## `JZ3` 从尾到头打印链表
+
+[链接](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)
+
+```cpp
+/**
+*  struct ListNode {
+*        int val;
+*        struct ListNode *next;
+*        ListNode(int x) :
+*              val(x), next(NULL) {
+*        }
+*  };
+*/
+class Solution {
+public:
+    vector<int> printListFromTailToHead (ListNode* head) {
+        vector<int> res;
+        ListNode* ptr = head;
+        while (ptr != NULL) {
+            res.push_back(ptr -> val);
+            ptr = ptr -> next;
+        }
+        reverse(res.begin(), res.end());
+        return res;
+    }
+};
+```
+
