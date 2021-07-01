@@ -414,3 +414,39 @@ public:
 };
 ```
 
+## `JZ35` 数组中的逆序对
+
+[链接](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5)
+
+```cpp
+class Solution {
+    const int M = 1000000007;
+    int merge_sort (int l, int r, vector<int> &a) {
+        if (l >= r) return 0;
+
+        int res = 0, mid = l + r >> 1;
+        res = (res + merge_sort(l, mid, a)) % M;
+        res = (res + merge_sort(mid + 1, r, a)) % M;
+
+        vector<int> temp;
+        int idl = l, idr = mid + 1;
+        while (idl <= mid && idr <= r) {
+            if (a[idl] < a[idr]) {
+                temp.push_back(a[idl ++]);
+            } else {
+                res = (res + mid - idl + 1) % M;
+                temp.push_back(a[idr ++]);
+            }
+        }
+        while (idl <= mid) temp.push_back(a[idl ++]);
+        while (idr <= r) temp.push_back(a[idr ++]);
+        for (int i = 0; i < temp.size(); ++ i) a[l + i] = temp[i];
+        return res;
+    }
+public:
+    int InversePairs(vector<int> data) {
+        return merge_sort(0, (int)data.size() - 1, data);
+    }
+};
+```
+
