@@ -281,3 +281,31 @@ public:
 };
 ```
 
+## `JZ15` 反转链表
+
+[链接](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)
+
+```cpp
+/*
+struct ListNode {
+	int val;
+	struct ListNode *next;
+	ListNode(int x) :
+			val(x), next(NULL) {
+	}
+};*/
+class Solution {
+public:
+    ListNode* ReverseList (ListNode* pHead) {
+        ListNode *prev = NULL, *cur = pHead;
+        while (cur != NULL) {
+            ListNode* temp = cur -> next;
+            cur -> next = prev;
+            prev = cur;
+            cur = temp;
+        }
+        return prev;
+    }
+};
+```
+
