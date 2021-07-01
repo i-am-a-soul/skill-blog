@@ -229,3 +229,24 @@ public:
 };
 ```
 
+## `JZ12` 数值的整数次方
+
+[链接](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)
+
+```cpp
+class Solution {
+public:
+    double Power(double base, int exponent) {
+        bool flag = (exponent < 0);
+        exponent = abs(exponent);
+        double res = 1;
+        while (exponent > 0) {
+            if (exponent & 1) res = res * base;
+            base = base * base;
+            exponent /= 2;
+        }
+        return flag ? (1 / res) : res;
+    }
+};
+```
+
