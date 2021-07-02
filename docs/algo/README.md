@@ -762,7 +762,46 @@ public:
 };
 ```
 
+## `JZ60` 把二叉树打印成多行
 
+[链接](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288)
+
+```cpp
+/*
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+    }
+};
+*/
+class Solution {
+    struct node {
+        TreeNode* ptr;
+        int dep;
+    };
+public:
+    vector<vector<int> > Print (TreeNode* pRoot) {
+        vector<vector<int> > res;
+        queue<node> q;
+        if (pRoot != NULL) q.push({ pRoot, 0 });
+        while (!q.empty()) {
+            TreeNode* cur = q.front().ptr;
+            int dep = q.front().dep;
+            q.pop();
+
+            if (dep == res.size()) res.push_back({});
+            res[dep].push_back(cur -> val);
+
+            if (cur -> left != NULL) q.push({ cur -> left, dep + 1 });
+            if (cur -> right != NULL) q.push({ cur -> right, dep + 1 });
+        }
+        return res;
+    }
+};
+```
 
 ## `JZ64` 滑动窗口的最大值
 
