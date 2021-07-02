@@ -356,6 +356,32 @@ public:
 };
 ```
 
+## `JZ18` 二叉树的镜像
+
+[链接](https://www.nowcoder.com/practice/a9d0ecbacef9410ca97463e4a5c83be7)
+
+```cpp
+/**
+ * struct TreeNode {
+ *	int val;
+ *	struct TreeNode *left;
+ *	struct TreeNode *right;
+ *	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* Mirror (TreeNode* pRoot) {
+        if (pRoot == NULL) return NULL;
+
+        Mirror(pRoot -> left);
+        Mirror(pRoot -> right);
+        swap(pRoot -> left, pRoot -> right);
+        return pRoot;
+    }
+};
+```
+
 ## `JZ20` 包含`min`函数的栈
 
 [链接](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)
