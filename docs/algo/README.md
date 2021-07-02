@@ -250,6 +250,26 @@ public:
 };
 ```
 
+## `JZ13` 调整数组顺序使奇数位于偶数前面
+
+[链接](https://www.nowcoder.com/practice/ef1f53ef31ca408cada5093c8780f44b)
+
+```cpp
+class Solution {
+public:
+    vector<int> reOrderArray (vector<int>& array) {
+        vector<int> res;
+        for (int i = 0; i < array.size(); ++ i)
+            if (array[i] & 1)
+                res.push_back(array[i]);
+        for (int i = 0; i < array.size(); ++ i)
+            if (array[i] % 2 == 0)
+                res.push_back(array[i]);
+        return res;
+    }
+};
+```
+
 ## `JZ14` 链表中倒数最后`k`个结点
 
 [链接](https://www.nowcoder.com/practice/886370fe658f41b498d40fb34ae76ff9)
