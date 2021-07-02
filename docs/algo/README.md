@@ -601,6 +601,43 @@ public:
 };
 ```
 
+## `JZ24` 二叉树中和为某一值的路径
+
+[链接](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca)
+
+```cpp
+/*
+struct TreeNode {
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+	TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+	}
+};*/
+class Solution {
+    vector<vector<int> > res;
+    vector<int> cur_path;
+    void dfs (TreeNode* root, int sum, int target) {
+        if (sum == target) res.push_back(cur_path);
+        if (root == NULL) return;
+
+        cur_path.push_back(root -> val);
+        dfs(root -> left, sum + root -> left -> val, target);
+        dfs(root -> right, sum + root -> right -> val, target);
+        cur_path.pop_back();
+    }
+public:
+    vector<vector<int> > FindPath (TreeNode* root, int target) {
+        if (root == NULL) return {};
+
+        dfs(root, root -> val, target);
+        FindPath(root -> left, target);
+        FindPath(root -> right, target);
+        return res;
+    }
+};
+```
 ## `JZ29` 最小的`K`个数
 
 [链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
