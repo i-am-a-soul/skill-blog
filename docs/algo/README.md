@@ -1047,6 +1047,32 @@ public:
 };
 ```
 
+## `JZ42` 和为`S`的两个数字
+
+[链接](https://www.nowcoder.com/practice/390da4f7a00f44bea7c2f3d19491311b)
+
+```cpp
+class Solution {
+public:
+    vector<int> FindNumbersWithSum (vector<int> a, int sum) {
+        vector<int> res;
+        int n = a.size();
+        for (int i = 0, j = n - 1; i < n; ++ i) {
+            while (j > i && a[i] + a[j] > sum) -- j;
+
+            if (i != j && a[i] + a[j] == sum) {
+                if (res.size() == 0
+                    || a[i] * a[j] < res[0] * res[1]
+                ) {
+                    res = { a[i], a[j] };
+                }
+            }
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ43` 左旋转字符串
 
 [链接](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec)
