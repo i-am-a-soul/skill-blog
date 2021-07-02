@@ -718,6 +718,50 @@ public:
 };
 ```
 
+## `JZ59` 按之字形顺序打印二叉树
+
+[链接](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)
+
+```cpp
+/*
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+    }
+};
+*/
+class Solution {
+    struct node {
+        TreeNode* ptr;
+        int dep;
+    };
+public:
+    vector<vector<int> > Print (TreeNode* pRoot) {
+        vector<vector<int> > res;
+        queue<node> q;
+        if (pRoot != NULL) q.push({ pRoot, 0 });
+        while (!q.empty()) {
+            TreeNode* cur = q.front().ptr;
+            int dep = q.front().dep;
+            q.pop();
+
+            if (dep == res.size()) res.push_back({});
+            res[dep].push_back(cur -> val);
+
+            if (cur -> left != NULL) q.push({ cur -> left, dep + 1 });
+            if (cur -> right != NULL) q.push({ cur -> right, dep + 1 });
+        }
+
+        for (int i = 1; i < res.size(); i += 2)
+            reverse(res[i].begin(), res[i].end());
+        return res;
+    }
+};
+```
+
 
 
 ## `JZ64` 滑动窗口的最大值
