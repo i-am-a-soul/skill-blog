@@ -540,6 +540,26 @@ public:
 };
 ```
 
+## `JZ30` 连续子数组的最大和
+
+[链接](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)
+
+```cpp
+class Solution {
+    #define inf 0x3f3f3f3f
+public:
+    int FindGreatestSumOfSubArray (vector<int> array) {
+        int res = -inf, sum = 0;
+        for (int i = 0; i < array.size(); ++ i) {
+            sum += array[i];
+            res = max(res, sum);
+            if (sum < 0) sum = 0;
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ33` 丑数
 
 [链接](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b)
