@@ -658,6 +658,32 @@ public:
 };
 ```
 
+## `JZ39` 平衡二叉树
+
+[链接](https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222)
+
+```cpp
+class Solution {
+    bool check (TreeNode* pRoot, int& h) {
+        if (pRoot == NULL) {
+            h = 0;
+            return true;
+        }
+
+        int hl, hr;
+        bool a = check(pRoot -> left, hl);
+        bool b = check(pRoot -> right, hr);
+        h = max(hl, hr) + 1;
+        return a && b && abs(hl - hr) <= 1;
+    }
+public:
+    bool IsBalanced_Solution (TreeNode* pRoot) {
+        int h;
+        return check(pRoot, h);
+    }
+};
+```
+
 ## `JZ64` 滑动窗口的最大值
 
 [链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
