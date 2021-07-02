@@ -631,6 +631,33 @@ public:
 };
 ```
 
+## `JZ38` 二叉树的深度
+
+[链接](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b)
+
+```cpp
+/*
+struct TreeNode {
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+	TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+	}
+};*/
+class Solution {
+public:
+    int TreeDepth (TreeNode* pRoot) {
+        if (pRoot == NULL) return 0;
+
+        return max(
+            TreeDepth(pRoot -> left),
+            TreeDepth(pRoot -> right)
+        ) + 1;
+    }
+};
+```
+
 ## `JZ64` 滑动窗口的最大值
 
 [链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
