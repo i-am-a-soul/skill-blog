@@ -826,3 +826,24 @@ public:
 };
 ```
 
+## `JZ67` 剪绳子
+
+[链接](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)
+
+```cpp
+class Solution {
+    int f[62];
+public:
+    int cutRope (int n, int prev_len = 1) {
+        if (n == 0) return 1;
+        if (f[n] != 0) return f[n];
+        
+        int res = 0;
+        for (int i = prev_len; i <= n; ++ i) {
+            res = max(res, i * cutRope(n - i, i));
+        }
+        return f[n] = res;
+    }
+};
+```
+
