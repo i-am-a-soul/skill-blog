@@ -684,6 +684,20 @@ public:
 };
 ```
 
+## `JZ43` 左旋转字符串
+
+[链接](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec)
+
+```cpp
+class Solution {
+public:
+    string LeftRotateString (string str, int n) {
+        if (str.size() < n) return "";
+        return str.substr(n) + str.substr(0, n);
+    }
+};
+```
+
 ## `JZ64` 滑动窗口的最大值
 
 [链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
