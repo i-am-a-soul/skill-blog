@@ -676,6 +676,42 @@ public:
 };
 ```
 
+## `JZ27` 字符串的排列
+
+[链接](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7)
+
+```cpp
+class Solution {
+    vector<string> res;
+    bool mark[12];
+    string s;
+    void dfs (int len, const string& str) {
+        if (len == str.size()) {
+            res.push_back(s);
+            return;
+        }
+
+        char prev = '#';
+        for (int i = 0; i < str.size(); ++ i) {
+            if (mark[i] == false && str[i] != prev) {
+                mark[i] = true;
+                s += str[i];
+                dfs(len + 1, str);
+                s.pop_back();
+                mark[i] = false;
+                prev = str[i];
+            }
+        }
+    }
+public:
+    vector<string> Permutation (string str) {
+        sort(str.begin(), str.end());
+        dfs(0, str);
+        return res;
+    }
+};
+```
+
 ## `JZ29` 最小的`K`个数
 
 [链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
