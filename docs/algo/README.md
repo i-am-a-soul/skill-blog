@@ -991,6 +991,33 @@ public:
 };
 ```
 
+## `JZ40` 数组中只出现一次的两个数字
+
+[链接](https://www.nowcoder.com/practice/389fc1c3d3be4479a154f63f495abff8)
+
+```cpp
+class Solution {
+public:
+    vector<int> FindNumsAppearOnce (vector<int>& a) {
+        unordered_set<int> us;
+        int x = 0;
+        for (int i = 0; i < a.size(); ++ i) {
+            us.insert(a[i]);
+            x = x ^ a[i];
+        }
+
+        for (int i = 0; i < a.size(); ++ i) {
+            if (us.find(a[i]) != us.end()
+                && us.find(x ^ a[i]) != us.end()
+            ) {
+                return { a[i], x ^ a[i] };
+            }
+        }
+        return {};
+    }
+};
+```
+
 ## `JZ43` 左旋转字符串
 
 [链接](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec)
