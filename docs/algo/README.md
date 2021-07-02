@@ -638,6 +638,44 @@ public:
     }
 };
 ```
+
+## `JZ25` 复杂链表的复制
+
+[链接](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba)
+
+```cpp
+/*
+struct RandomListNode {
+    int label;
+    struct RandomListNode *next, *random;
+    RandomListNode(int x) :
+        label(x), next(NULL), random(NULL) {
+    }
+};
+*/
+class Solution {
+public:
+    RandomListNode* Clone (RandomListNode* pHead) {
+        unordered_map<RandomListNode*, RandomListNode*> h; // 旧 -> 新
+
+        RandomListNode* ptr = pHead;
+        while (ptr != NULL) {
+            h[ptr] = new RandomListNode(ptr -> label);
+            ptr = ptr -> next;
+        }
+        h[NULL] = NULL;
+
+        ptr = pHead;
+        while (ptr != NULL) {
+            h[ptr] -> next = h[ptr -> next];
+            h[ptr] -> random = h[ptr -> random];
+            ptr = ptr -> next;
+        }
+        return h[pHead];
+    }
+};
+```
+
 ## `JZ29` 最小的`K`个数
 
 [链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
