@@ -617,6 +617,20 @@ public:
 };
 ```
 
+## `JZ37` 数字在升序数组中出现的次数
+
+[链接](https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2)
+
+```cpp
+class Solution {
+public:
+    int GetNumberOfK (vector<int> data, int k) {
+        return upper_bound(data.begin(), data.end(), k)
+            - lower_bound(data.begin(), data.end(), k);
+    }
+};
+```
+
 ## `JZ64` 滑动窗口的最大值
 
 [链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
