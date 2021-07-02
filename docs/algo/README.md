@@ -478,6 +478,39 @@ public:
 };
 ```
 
+## `JZ23` 二叉搜索树的后序遍历序列
+
+[链接](https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd)
+
+```cpp
+class Solution {
+public:
+    bool VerifySquenceOfBST (vector<int> a) {
+        if (a.size() == 0) return false;
+
+        int val = a.back();
+        a.pop_back();
+        bool flag = false;
+        for (int i = 0; i < a.size(); ++ i) {
+            if (a[i] > val) flag = true;
+            if (flag == true && a[i] < val) return false;
+        }
+
+        vector<int> x(
+            a.begin(),
+            upper_bound(a.begin(), a.end(), val)
+        ), y(
+            upper_bound(a.begin(), a.end(), val),
+            a.end()
+        );
+        bool res = true;
+        if (x.size() != 0) res = res && VerifySquenceOfBST(x);
+        if (y.size() != 0) res = res && VerifySquenceOfBST(y);
+        return res;
+    }
+};
+```
+
 ## `JZ29` 最小的`K`个数
 
 [链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
