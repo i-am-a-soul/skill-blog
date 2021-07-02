@@ -1222,6 +1222,45 @@ public:
 };
 ```
 
+## `JZ63` 数据流中的中位数
+
+[链接](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1)
+
+```cpp
+class Solution {
+    priority_queue<int> max_heap;
+    priority_queue<int, vector<int>, greater<int> > min_heap;
+public:
+    void Insert (int val) {
+        int cnt = max_heap.size() + min_heap.size();
+        if (cnt % 2 == 0) {
+            min_heap.push(val);
+        } else {
+            max_heap.push(val);
+        }
+
+        while (!max_heap.empty()
+            && !min_heap.empty()
+            && max_heap.top() > min_heap.top()
+        ) {
+            int a = max_heap.top();
+            max_heap.pop();
+            int b = min_heap.top();
+            min_heap.pop();
+            max_heap.push(b);
+            min_heap.push(a);
+        }
+    }
+    double GetMedian () { 
+        int cnt = max_heap.size() + min_heap.size();
+        if (cnt % 2 == 0) {
+            return (max_heap.top() + min_heap.top()) / 2.0;
+        }
+        return min_heap.top();
+    }
+};
+```
+
 ## `JZ64` 滑动窗口的最大值
 
 [链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
