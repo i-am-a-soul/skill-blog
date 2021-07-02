@@ -829,6 +829,31 @@ public:
 };
 ```
 
+## `JZ34` 第一个只出现一次的字符
+
+[链接](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c)
+
+```cpp
+class Solution {
+    int cnt[53];
+    int ch2i (char ch) {
+        if ('A' <= ch && ch <= 'Z')
+            return ch - 'A' + 1;
+        return ch - 'a' + 1 + 26;
+    }
+public:
+    int FirstNotRepeatingChar (string str) {
+        for (int i = 0; i < str.size(); ++ i)
+            ++ cnt[ch2i(str[i])];
+
+        for (int i = 0; i < str.size(); ++ i)
+            if (cnt[ch2i(str[i])] == 1)
+                return i;
+        return -1;
+    }
+};
+```
+
 ## `JZ35` 数组中的逆序对
 
 [链接](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5)
