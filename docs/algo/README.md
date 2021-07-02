@@ -1284,6 +1284,51 @@ public:
 };
 ```
 
+## `JZ65` 矩阵中的路径
+
+[链接](https://www.nowcoder.com/practice/2a49359695a544b8939c77358d29b7e6)
+
+```cpp
+class Solution {
+    int dirx[4] = { -1, 1, 0, 0 };
+    int diry[4] = { 0, 0, -1, 1 };
+    int n, m;
+    bool mark[210][210];
+
+    bool dfs (int x, int y, string rest, vector<vector<char> >& matrix) {
+        if (rest == "") return true;
+
+        mark[x][y] = true;
+        for (int i = 0; i < 4; ++ i) {
+            int nx = x + dirx[i], ny = y + diry[i];
+            if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
+            if (mark[nx][ny] == true) continue;
+            if (matrix[nx][ny] != rest[0]) continue;
+            if (dfs(nx, ny, rest.substr(1), matrix)) return true;
+        }
+        mark[x][y] = false;
+        return false;
+    }
+public:
+    bool hasPath (vector<vector<char> >& matrix, string word) {
+        if (word.size() == 0) return false;
+        n = matrix.size();
+        if (n == 0) return false;
+        m = matrix[0].size();
+
+        for (int i = 0; i < n; ++ i) {
+            for (int j = 0; j < m; ++ j) {
+                if (matrix[i][j] == word[0]) {
+                    memset(mark, 0, sizeof(mark));
+                    if (dfs(i, j, word.substr(1), matrix)) return true;
+                }
+            }
+        }
+        return false;
+    }
+};
+```
+
 ## `JZ67` 剪绳子
 
 [链接](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)
