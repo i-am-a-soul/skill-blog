@@ -712,6 +712,29 @@ public:
 };
 ```
 
+## `JZ28` 数组中出现次数超过一半的数字
+
+[链接](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)
+
+```cpp
+class Solution {
+public:
+    int MoreThanHalfNum_Solution (vector<int> a) {
+        int res = 0, cnt = 0;
+        for (int i = 0; i < a.size(); ++ i) {
+            if (cnt == 0) res = a[i];
+
+            if (res == a[i]) {
+                ++ cnt;
+            } else {
+                -- cnt;
+            }
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ29` 最小的`K`个数
 
 [链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
