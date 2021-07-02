@@ -504,6 +504,37 @@ public:
 };
 ```
 
+## `JZ21` 栈的压入、弹出序列
+
+[链接](https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106)
+
+```cpp
+class Solution {
+public:
+    bool IsPopOrder (vector<int> pushV, vector<int> popV) {
+        queue<int> q;
+        for (int i = 0; i < pushV.size(); ++ i) q.push(pushV[i]);
+
+        stack<int> s;
+        for (int i = 0; i < popV.size(); ++ i) {
+            if (!s.empty() && s.top() == popV[i]) {
+                s.pop();
+            } else {
+                while (true) {
+                    if (q.empty()) return false;
+                    int cur = q.front();
+                    q.pop();
+                    s.push(cur);
+                    if (cur == popV[i]) break;
+                }
+                s.pop();
+            }
+        }
+        return true;
+    }
+};
+```
+
 ## `JZ22` 从上往下打印二叉树
 
 [链接](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701)
