@@ -890,6 +890,40 @@ public:
 };
 ```
 
+## `JZ36` 两个链表的第一个公共结点
+
+[链接](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46)
+
+```cpp
+/*
+struct ListNode {
+	int val;
+	struct ListNode *next;
+	ListNode(int x) :
+        val(x), next(NULL) {
+	}
+};*/
+class Solution {
+public:
+    ListNode* FindFirstCommonNode (ListNode* pHead1, ListNode* pHead2) {
+        if (pHead1 == NULL || pHead2 == NULL) return NULL;
+
+        ListNode *p1 = pHead1, *p2 = pHead2;
+        int cnt = 0;
+        while (p1 != p2) {
+            p1 = p1 -> next;
+            if (p1 == NULL) {
+                p1 = pHead2;
+                if (++ cnt >= 2) return NULL;
+            }
+            p2 = p2 -> next;
+            if (p2 == NULL) p2 = pHead1;
+        }
+        return p1;
+    }
+};
+```
+
 ## `JZ37` 数字在升序数组中出现的次数
 
 [链接](https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2)
