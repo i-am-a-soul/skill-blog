@@ -445,6 +445,39 @@ public:
 };
 ```
 
+## `JZ22` 从上往下打印二叉树
+
+[链接](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701)
+
+```cpp
+/*
+struct TreeNode {
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+	TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+	}
+};*/
+class Solution {
+public:
+    vector<int> PrintFromTopToBottom (TreeNode* root) {
+        vector<int> res;
+        queue<TreeNode*> q;
+        if (root != NULL) q.push(root);
+        while (!q.empty()) {
+            TreeNode* cur = q.front();
+            q.pop();
+            res.push_back(cur -> val);
+
+            if (cur -> left != NULL) q.push(cur -> left);
+            if (cur -> right != NULL) q.push(cur -> right);
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ29` 最小的`K`个数
 
 [链接](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)
