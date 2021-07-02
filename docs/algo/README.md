@@ -784,6 +784,30 @@ public:
 };
 ```
 
+## `JZ32` 把数组排成最小的数
+
+[链接](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993)
+
+```cpp
+class Solution {
+    static bool cmp (const string& a, const string& b) {
+        return a + b < b + a;
+    }
+public:
+    string PrintMinNumber(vector<int> numbers) {
+        vector<string> a;
+        for (int i = 0; i < numbers.size(); ++ i)
+            a.push_back(to_string(numbers[i]));
+        
+        sort(a.begin(), a.end(), cmp);
+        string res = "";
+        for (int i = 0; i < a.size(); ++ i)
+            res += a[i];
+        return res;
+    }
+};
+```
+
 ## `JZ33` 丑数
 
 [链接](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b)
