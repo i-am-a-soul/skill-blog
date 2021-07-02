@@ -698,6 +698,28 @@ public:
 };
 ```
 
+## `JZ50` 数组中重复的数字
+
+[链接](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)
+
+```cpp
+class Solution {
+public:
+    int duplicate (vector<int>& numbers) {
+        unordered_set<int> us;
+        for (int i = 0; i < numbers.size(); ++ i) {
+            if (us.find(numbers[i]) != us.end()) {
+                return numbers[i];
+            }
+            us.insert(numbers[i]);
+        }
+        return -1;
+    }
+};
+```
+
+
+
 ## `JZ64` 滑动窗口的最大值
 
 [链接](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)
