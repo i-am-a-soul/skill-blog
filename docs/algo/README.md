@@ -1087,6 +1087,36 @@ public:
 };
 ```
 
+## `JZ44` 翻转单词序列
+
+[链接](https://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3)
+
+```cpp
+class Solution {
+public:
+    string ReverseSentence (string str) {
+        string res, temp;
+        stack<string> s;
+        for (int i = 0; i < str.size(); ++ i) {
+            if (str[i] == ' ') {
+                s.push(temp);
+                temp = "";
+                continue;
+            }
+            temp += str[i];
+        }
+        s.push(temp);
+
+        while (!s.empty()) {
+            res = res + s.top() + " ";
+            s.pop();
+        }
+        res.pop_back();
+        return res;
+    }
+};
+```
+
 ## `JZ50` 数组中重复的数字
 
 [链接](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)
