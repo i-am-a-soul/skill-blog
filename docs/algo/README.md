@@ -1018,6 +1018,35 @@ public:
 };
 ```
 
+## `JZ41` 和为`S`的连续正数序列
+
+[链接](https://www.nowcoder.com/practice/c451a3fd84b64cb19485dad758a55ebe)
+
+```cpp
+class Solution {
+public:
+    vector<vector<int> > FindContinuousSequence (int target) {
+        vector<vector<int> > res;
+        int sum = 0;
+        for (int i = 1, j = 1; j < target; ++ j) { // [i, j]
+            sum += j;
+            while (i < j && sum > target) {
+                sum -= i;
+                ++ i;
+            }
+
+            if (i != j && sum == target) {
+                vector<int> temp;
+                for (int k = i; k <= j; ++ k)
+                    temp.push_back(k);
+                res.push_back(temp);
+            }
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ43` 左旋转字符串
 
 [链接](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec)
