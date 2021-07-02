@@ -382,6 +382,40 @@ public:
 };
 ```
 
+## `JZ19` 顺时针打印矩阵
+
+[链接](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)
+
+```cpp
+class Solution {
+public:
+    vector<int> printMatrix (vector<vector<int> > matrix) {
+        int n = matrix.size();
+        if (n == 0) return {};
+        int m = matrix[0].size();
+
+        int a = 0, b = n - 1, x = 0, y = m - 1;
+        vector<int> res;
+        while (true) {
+            for (int j = x; j <= y; ++ j)
+                res.push_back(matrix[a][j]);
+            for (int i = a + 1; i <= b - 1; ++ i)
+                res.push_back(matrix[i][y]);
+            if (a < b) {
+                for (int j = y; j >= x; -- j)
+                    res.push_back(matrix[b][j]);
+            }
+            if (x < y) {
+                for (int i = b - 1; i >= a + 1; -- i)
+                    res.push_back(matrix[i][x]);
+            }
+            if (++ a > -- b || ++ x > -- y) break;
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ20` 包含`min`函数的栈
 
 [链接](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)
