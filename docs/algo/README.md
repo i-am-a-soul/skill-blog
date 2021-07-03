@@ -1243,6 +1243,24 @@ public:
 };
 ```
 
+## `JZ48` 不用加减乘除做加法
+
+[链接](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215)
+
+```cpp
+class Solution {
+public:
+    int Add (int a, int b) {
+        while (b != 0) {
+            int carry = (a & b) << 1;
+            a ^= b;
+            b = carry;
+        }
+        return a;
+    }
+};
+```
+
 ## `JZ50` 数组中重复的数字
 
 [链接](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)
