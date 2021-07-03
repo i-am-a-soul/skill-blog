@@ -1321,6 +1321,35 @@ public:
 };
 ```
 
+## `JZ51` 构建乘积数组
+
+[链接](https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46)
+
+```cpp
+class Solution {
+public:
+    vector<int> multiply (const vector<int>& a) {
+        int n = a.size();
+        if (n <= 1) return {};
+
+        vector<int> prefix_prod = { a[0] };
+        for (int i = 1; i < n; ++ i)
+            prefix_prod.push_back(prefix_prod[i - 1] * a[i]);
+        vector<int> suffix_prod;
+        for (int i = n - 1; i >= 0; -- i)
+            suffix_prod.push_back(i == n - 1 ? a[i] : suffix_prod.back() * a[i]);
+        reverse(suffix_prod.begin(), suffix_prod.end());
+
+        vector<int> res;
+        res.push_back(suffix_prod[1]);
+        for (int i = 1; i < n - 1; ++ i)
+            res.push_back(prefix_prod[i - 1] * suffix_prod[i + 1]);
+        res.push_back(prefix_prod[n - 2]);
+        return res;
+    }
+};
+```
+
 ## `JZ59` 按之字形顺序打印二叉树
 
 [链接](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)
