@@ -1,5 +1,11 @@
 # 剑指`Offer`
 
+## 数据结构
+
+```cpp
+
+```
+
 ## `JZ1` 二维数组中的查找
 
 [链接](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)
@@ -1350,6 +1356,41 @@ public:
 };
 ```
 
+## `JZ55` 链表中环的入口结点
+
+[链接](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4)
+
+```cpp
+/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) :
+        val(x), next(NULL) {
+    }
+};
+*/
+class Solution {
+public:
+    ListNode* EntryNodeOfLoop(ListNode* pHead) {
+        ListNode *fast = pHead, *slow = pHead;
+        while (fast != NULL && fast -> next != NULL) {
+            fast = fast -> next -> next;
+            slow = slow -> next;
+            if (fast == slow) break;
+        }
+        if (fast == NULL || fast -> next == NULL) return NULL;
+
+        fast = pHead;
+        while (fast != slow) {
+            fast = fast -> next;
+            slow = slow -> next;
+        }
+        return fast;
+    }
+};
+```
+
 ## `JZ59` 按之字形顺序打印二叉树
 
 [链接](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)
@@ -1431,6 +1472,55 @@ public:
             if (cur -> right != NULL) q.push({ cur -> right, dep + 1 });
         }
         return res;
+    }
+};
+```
+
+## `JZ62` 二叉搜索树的第`k`个结点
+
+[链接](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a)
+
+```cpp
+/*
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+    }
+};
+*/
+class Solution {
+    #define size SiZe
+    unordered_map<TreeNode*, int> size;
+    int dfs (TreeNode* pRoot) {
+        if (pRoot == NULL) return 0;
+
+        return size[pRoot] = dfs(pRoot -> left)
+            + dfs(pRoot -> right)
+            + 1;
+    }
+    TreeNode* find (TreeNode* pRoot, int k) {
+        int s = size[pRoot -> left];
+
+        if (s + 1 == k) {
+            return pRoot;
+        } else if (s + 1 > k) {
+            return find (pRoot -> left, k);
+        } else {
+            return find (pRoot -> right, k - s - 1);
+        }
+    }
+public:
+    TreeNode* KthNode (TreeNode* pRoot, int k) {
+        if (pRoot == NULL || k == 0) return NULL;
+
+        dfs(pRoot);
+        size[NULL] = 0;
+        if (k > size[pRoot]) return NULL;
+
+        return find(pRoot, k);
     }
 };
 ```
