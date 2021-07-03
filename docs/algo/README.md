@@ -1192,6 +1192,57 @@ public:
 };
 ```
 
+## `JZ45` 扑克牌顺子
+
+[链接](https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4)
+
+```cpp
+class Solution {
+public:
+    bool IsContinuous (vector<int> a) {
+        sort(a.begin(), a.end());
+        int cnt = 0;
+        for (int i = 0; i < a.size(); ++ i)
+            if (a[i] == 0)
+                ++ cnt;
+        int beg;
+        for (int i = 0; i < a.size(); ++ i) {
+            if (a[i] != 0) {
+                beg = a[i];
+                break;
+            }
+        }
+        for (int i = cnt; i < a.size(); ++ i) {
+            if (a[i] == beg) {
+                ++ beg;
+            } else if (a[i] < beg) {
+                return false;
+            } else if (cnt >= a[i] - beg) { // a[i] > beg
+                cnt -= (a[i] - beg);
+                beg = a[i] + 1;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+```
+
+## `JZ47` 求`1+2+3+...+n`
+
+[链接](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1)
+
+```cpp
+class Solution {
+public:
+    int Sum_Solution (int n) {
+        bool b = n > 1 && (n += Sum_Solution(n - 1));
+        return n;
+    }
+};
+```
+
 ## `JZ50` 数组中重复的数字
 
 [链接](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)
