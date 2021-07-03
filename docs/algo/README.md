@@ -936,9 +936,9 @@ public:
 ```cpp
 class Solution {
 public:
-    int GetNumberOfK (vector<int> data, int k) {
-        return upper_bound(data.begin(), data.end(), k)
-            - lower_bound(data.begin(), data.end(), k);
+    int GetNumberOfK (vector<int> a, int k) {
+        return upper_bound(a.begin(), a.end(), k)
+            - lower_bound(a.begin(), a.end(), k);
     }
 };
 ```
@@ -1076,9 +1076,9 @@ public:
 ```cpp
 class Solution {
 public:
-    string LeftRotateString (string str, int n) {
-        if (str.size() < n) return "";
-        return str.substr(n) + str.substr(0, n);
+    string LeftRotateString (string str, int k) {
+        if (str.size() < k) return "";
+        return str.substr(k) + str.substr(0, k);
     }
 };
 ```
@@ -1097,9 +1097,9 @@ public:
             if (str[i] == ' ') {
                 s.push(temp);
                 temp = "";
-                continue;
+            } else {
+                temp += str[i];
             }
-            temp += str[i];
         }
         s.push(temp);
 
@@ -1135,7 +1135,7 @@ public:
         }
         for (int i = cnt; i < a.size(); ++ i) {
             if (a[i] == beg) {
-                ++ beg;
+                beg = a[i] + 1;
             } else if (a[i] < beg) {
                 return false;
             } else if (cnt >= a[i] - beg) { // a[i] > beg
@@ -1229,13 +1229,13 @@ public:
 ```cpp
 class Solution {
 public:
-    int duplicate (vector<int>& numbers) {
+    int duplicate (vector<int>& a) {
         unordered_set<int> us;
-        for (int i = 0; i < numbers.size(); ++ i) {
-            if (us.find(numbers[i]) != us.end()) {
-                return numbers[i];
+        for (int i = 0; i < a.size(); ++ i) {
+            if (us.find(a[i]) != us.end()) {
+                return a[i];
             }
-            us.insert(numbers[i]);
+            us.insert(a[i]);
         }
         return -1;
     }
@@ -1256,6 +1256,7 @@ public:
         vector<int> prefix_prod = { a[0] };
         for (int i = 1; i < n; ++ i)
             prefix_prod.push_back(prefix_prod[i - 1] * a[i]);
+            
         vector<int> suffix_prod;
         for (int i = n - 1; i >= 0; -- i)
             suffix_prod.push_back(i == n - 1 ? a[i] : suffix_prod.back() * a[i]);
@@ -1278,7 +1279,7 @@ public:
 ```cpp
 class Solution {
 public:
-    ListNode* EntryNodeOfLoop(ListNode* pHead) {
+    ListNode* EntryNodeOfLoop (ListNode* pHead) {
         ListNode *fast = pHead, *slow = pHead;
         while (fast != NULL && fast -> next != NULL) {
             fast = fast -> next -> next;
@@ -1447,16 +1448,16 @@ public:
 ```cpp
 class Solution {
 public:
-    vector<int> maxInWindows (const vector<int>& num, unsigned int k) {
-        if (k > num.size()) return {};
+    vector<int> maxInWindows (const vector<int>& a, unsigned int k) {
+        if (k > a.size()) return {};
         
         deque<int> dq;
         vector<int> res;
-        for (int i = 0; i < num.size(); ++ i) {
+        for (int i = 0; i < a.size(); ++ i) {
             if (!dq.empty() && i - dq.front() + 1 > k) dq.pop_front();
-            while (!dq.empty() && num[dq.back()] <= num[i]) dq.pop_back();
+            while (!dq.empty() && a[dq.back()] <= a[i]) dq.pop_back();
             dq.push_back(i);
-            if (i >= k - 1) res.push_back(num[dq.front()]);
+            if (i >= k - 1) res.push_back(a[dq.front()]);
         }
         return res;
     }
@@ -1483,7 +1484,10 @@ class Solution {
             if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
             if (mark[nx][ny] == true) continue;
             if (matrix[nx][ny] != rest[0]) continue;
-            if (dfs(nx, ny, rest.substr(1), matrix)) return true;
+            if (dfs(nx, ny, rest.substr(1), matrix)) {
+                mark[x][y] = false;
+                return true;
+            }
         }
         mark[x][y] = false;
         return false;
@@ -1497,9 +1501,10 @@ public:
 
         for (int i = 0; i < n; ++ i) {
             for (int j = 0; j < m; ++ j) {
-                if (matrix[i][j] == word[0]) {
-                    memset(mark, 0, sizeof(mark));
-                    if (dfs(i, j, word.substr(1), matrix)) return true;
+                if (matrix[i][j] == word[0]
+                    && dfs(i, j, word.substr(1), matrix)
+                ) {
+                    return true;
                 }
             }
         }
@@ -1518,8 +1523,8 @@ class Solution {
 public:
     int cutRope (int n, int prev_len = 1) {
         if (n == 0) return 1;
-        if (f[n] != 0) return f[n];
-          
+        if (f[n] != 0) return f[n]; // 记忆化
+        
         int res = 0;
         for (int i = prev_len; i <= n; ++ i) {
             res = max(res, i * cutRope(n - i, i));
