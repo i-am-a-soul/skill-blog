@@ -30,10 +30,10 @@ struct RandomListNode {
 // 时间复杂度：O(nlogn)
 class Solution {
 public:
-    bool Find (int target, vector<vector<int> > array) {
-        for (int i = 0; i < array.size(); ++ i) {
-            int cnt = upper_bound(array[i].begin(), array[i].end(), target)
-                - lower_bound(array[i].begin(), array[i].end(), target);
+    bool Find (int target, vector<vector<int> > a) {
+        for (int i = 0; i < a.size(); ++ i) {
+            int cnt = upper_bound(a[i].begin(), a[i].end(), target)
+                - lower_bound(a[i].begin(), a[i].end(), target);
             if (cnt >= 1) return true;
         }
         return false;
@@ -48,13 +48,13 @@ public:
 ```cpp
 class Solution {
 public:
-    string replaceSpace (string s) {
+    string replaceSpace (string str) {
         string res = "";
-        for (int i = 0; i < s.size(); ++ i) {
-            if (s[i] == ' ') {
+        for (int i = 0; i < str.size(); ++ i) {
+            if (str[i] == ' ') {
                 res += "%20";
             } else {
-                res += s[i];
+                res += str[i];
             }
         }
         return res;
@@ -69,9 +69,9 @@ public:
 ```cpp
 class Solution {
 public:
-    vector<int> printListFromTailToHead (ListNode* head) {
+    vector<int> printListFromTailToHead (ListNode* pHead) {
         vector<int> res;
-        ListNode* ptr = head;
+        ListNode* ptr = pHead;
         while (ptr != NULL) {
             res.push_back(ptr -> val);
             ptr = ptr -> next;
@@ -92,22 +92,22 @@ public:
     TreeNode* reConstructBinaryTree (vector<int> pre, vector<int> vin) {
         if (pre.size() == 0) return NULL;
 
-        TreeNode* cur = NULL;
+        TreeNode* pRoot = NULL;
         for (int i = 0; i < vin.size(); ++ i) {
             if (vin[i] == pre[0]) {
-                cur = new TreeNode(pre[0]);
-                cur -> left = reConstructBinaryTree(
+                pRoot = new TreeNode(pre[0]);
+                pRoot -> left = reConstructBinaryTree(
                     vector<int>(pre.begin() + 1, pre.begin() + i + 1),
                     vector<int>(vin.begin(), vin.begin() + i)
                 );
-                cur -> right = reConstructBinaryTree(
+                pRoot -> right = reConstructBinaryTree(
                     vector<int>(pre.begin() + i + 1, pre.end()),
                     vector<int>(vin.begin() + i + 1, vin.end())
                 );
                 break;
             }
         }
-        return cur;
+        return pRoot;
     }
 };
 ```
@@ -120,11 +120,10 @@ public:
 
 ```cpp
 class Solution {
-private:
     stack<int> stack1, stack2;
 public:
-    void push (int node) {
-        stack2.push(node);
+    void push (int val) {
+        stack2.push(val);
     }
     int pop () {
         if (stack1.empty()) {
@@ -193,10 +192,10 @@ public:
 ```cpp
 class Solution {
 public:
-    int jumpFloor (int number) {
-        if (number == 0 || number == 1) return 1;
+    int jumpFloor (int n) {
+        if (n == 0 || n == 1) return 1;
 
-        return jumpFloor(number - 1) + jumpFloor(number - 2);
+        return jumpFloor(n - 1) + jumpFloor(n - 2);
     }
 };
 ```
@@ -208,8 +207,8 @@ public:
 ```cpp
 class Solution {
 public:
-    int jumpFloorII (int number) {
-        return 1 << (number - 1);
+    int jumpFloorII (int n) {
+        return 1 << (n - 1);
     }
 };
 ```
@@ -221,12 +220,12 @@ public:
 ```cpp
 class Solution {
 public:
-    int rectCover (int number) {
-        if (number == 0) return 0;
-        if (number == 1) return 1;
+    int rectCover (int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
 
         int res, a = 1, b = 1;
-        for (int i = 2; i <= number; ++ i) {
+        for (int i = 2; i <= n; ++ i) {
             res = a + b;
             a = b;
             b = res;
@@ -246,11 +245,11 @@ class Solution {
         return x & -x;
     }
 public:
-    int NumberOf1 (int n) {
+    int NumberOf1 (int x) {
         int res = 0;
-        while (n != 0) {
+        while (x != 0) {
             ++ res;
-            n -= lowbit(n);
+            x -= lowbit(x);
         }
         return res;
     }
@@ -264,7 +263,7 @@ public:
 ```cpp
 class Solution {
 public:
-    double Power(double base, int exponent) {
+    double Power (double base, int exponent) {
         bool flag = (exponent < 0);
         exponent = abs(exponent);
         double res = 1;
@@ -285,14 +284,14 @@ public:
 ```cpp
 class Solution {
 public:
-    vector<int> reOrderArray (vector<int>& array) {
+    vector<int> reOrderArray (vector<int>& a) {
         vector<int> res;
-        for (int i = 0; i < array.size(); ++ i)
-            if (array[i] & 1)
-                res.push_back(array[i]);
-        for (int i = 0; i < array.size(); ++ i)
-            if (array[i] % 2 == 0)
-                res.push_back(array[i]);
+        for (int i = 0; i < a.size(); ++ i)
+            if (a[i] & 1)
+                res.push_back(a[i]);
+        for (int i = 0; i < a.size(); ++ i)
+            if (a[i] % 2 == 0)
+                res.push_back(a[i]);
         return res;
     }
 };
@@ -349,6 +348,7 @@ public:
 ```cpp
 class Solution {
     ListNode *pHead = NULL, *temp;
+    
     void insert (ListNode* &ptr) {
         temp = ptr -> next;
         ptr -> next = pHead;
@@ -441,8 +441,8 @@ public:
         if (n == 0) return {};
         int m = matrix[0].size();
 
-        int a = 0, b = n - 1, x = 0, y = m - 1;
         vector<int> res;
+        int a = 0, b = n - 1, x = 0, y = m - 1;
         while (true) {
             for (int j = x; j <= y; ++ j)
                 res.push_back(matrix[a][j]);
@@ -474,10 +474,10 @@ class Solution {
     };
     stack<node> s;
 public:
-    void push (int value) {
+    void push (int val) {
         s.push({
-            value,
-            s.empty() ? value : std::min(min(), value)
+            val,
+            s.empty() ? val : std::min(this -> min(), val)
         });
     }
     void pop () {
@@ -530,10 +530,10 @@ public:
 ```cpp
 class Solution {
 public:
-    vector<int> PrintFromTopToBottom (TreeNode* root) {
+    vector<int> PrintFromTopToBottom (TreeNode* pRoot) {
         vector<int> res;
         queue<TreeNode*> q;
-        if (root != NULL) q.push(root);
+        if (pRoot != NULL) q.push(pRoot);
         while (!q.empty()) {
             TreeNode* cur = q.front();
             q.pop();
@@ -586,24 +586,32 @@ public:
 
 ```cpp
 class Solution {
+    int target;
     vector<vector<int> > res;
     vector<int> cur_path;
-    void dfs (TreeNode* root, int sum, int target) {
-        if (sum == target) res.push_back(cur_path);
-        if (root == NULL) return;
+    
+    bool dfs1 (TreeNode* pRoot, int sum) {
+        if (pRoot == NULL) return sum == target;
 
-        cur_path.push_back(root -> val);
-        dfs(root -> left, sum + root -> left -> val, target);
-        dfs(root -> right, sum + root -> right -> val, target);
+        cur_path.push_back(pRoot -> val);
+        bool b1 = dfs1(pRoot -> left, sum + pRoot -> val);
+        bool b2 = dfs1(pRoot -> right, sum + pRoot -> val);
+        if (b1 && b2) res.push_back(cur_path);
         cur_path.pop_back();
+        return false;
+    }
+    void dfs2 (TreeNode* pRoot) {
+        if (pRoot == NULL) return;
+
+        dfs1(pRoot, 0);
+        dfs2(pRoot -> left);
+        dfs2(pRoot -> right);
     }
 public:
-    vector<vector<int> > FindPath (TreeNode* root, int target) {
-        if (root == NULL) return {};
-
-        dfs(root, root -> val, target);
-        FindPath(root -> left, target);
-        FindPath(root -> right, target);
+    vector<vector<int> > FindPath (TreeNode* pRoot, int target) {
+        this -> target = target;
+        dfs2(pRoot);
+        sort(res.begin(), res.end());
         return res;
     }
 };
@@ -643,7 +651,7 @@ public:
 
 ```cpp
 class Solution {
-    void solve (TreeNode* pRoot, TreeNode* &pHead, TreeNode* &pTail) {
+    void dfs (TreeNode* pRoot, TreeNode* &pHead, TreeNode* &pTail) {
         if (pRoot -> left == NULL && pRoot -> right == NULL) {
             pHead = pTail = pRoot;
             return;
@@ -651,7 +659,7 @@ class Solution {
 
         TreeNode *ph1, *pt1, *ph2, *pt2;
         if (pRoot -> left != NULL) {
-            solve(pRoot -> left, ph1, pt1);
+            dfs(pRoot -> left, ph1, pt1);
             pRoot -> left = pt1;
             pt1 -> right = pRoot;
             pHead = ph1;
@@ -660,7 +668,7 @@ class Solution {
         }
 
         if (pRoot -> right != NULL) {
-            solve(pRoot -> right, ph2, pt2);
+            dfs(pRoot -> right, ph2, pt2);
             pRoot -> right = ph2;
             ph2 -> left = pRoot;
             pTail = pt2;
@@ -673,7 +681,7 @@ public:
         if (pRoot == NULL) return NULL;
 
         TreeNode *ph, *pt;
-        solve(pRoot, ph, pt);
+        dfs(pRoot, ph, pt);
         return ph;
     }
 };
@@ -688,6 +696,7 @@ class Solution {
     vector<string> res;
     bool mark[12];
     string s;
+    
     void dfs (int len, const string& str) {
         if (len == str.size()) {
             res.push_back(s);
@@ -745,15 +754,15 @@ public:
 ```cpp
 class Solution {
 public:
-    vector<int> GetLeastNumbers_Solution (vector<int> input, int k) {
-        if (input.size() < k || k == 0) return {};
+    vector<int> GetLeastNumbers_Solution (vector<int> a, int k) {
+        if (a.size() < k || k == 0) return {};
 
         priority_queue<int> pq;
-        for (int i = 0; i < k; ++ i) pq.push(input[i]);
-        for (int i = k; i < input.size(); ++ i) {
-            if (input[i] < pq.top()) {
+        for (int i = 0; i < k; ++ i) pq.push(a[i]);
+        for (int i = k; i < a.size(); ++ i) {
+            if (a[i] < pq.top()) {
                 pq.pop();
-                pq.push(input[i]);
+                pq.push(a[i]);
             }
         }
 
@@ -775,10 +784,10 @@ public:
 class Solution {
     #define inf 0x3f3f3f3f
 public:
-    int FindGreatestSumOfSubArray (vector<int> array) {
+    int FindGreatestSumOfSubArray (vector<int> a) {
         int res = -inf, sum = 0;
-        for (int i = 0; i < array.size(); ++ i) {
-            sum += array[i];
+        for (int i = 0; i < a.size(); ++ i) {
+            sum += a[i];
             res = max(res, sum);
             if (sum < 0) sum = 0;
         }
@@ -797,10 +806,10 @@ class Solution {
         return a + b < b + a;
     }
 public:
-    string PrintMinNumber(vector<int> numbers) {
+    string PrintMinNumber (vector<int> nums) {
         vector<string> a;
-        for (int i = 0; i < numbers.size(); ++ i)
-            a.push_back(to_string(numbers[i]));
+        for (int i = 0; i < nums.size(); ++ i)
+            a.push_back(to_string(nums[i]));
         
         sort(a.begin(), a.end(), cmp);
         string res = "";
@@ -818,16 +827,16 @@ public:
 ```cpp
 class Solution {
 public:
-    int GetUglyNumber_Solution (int index) {
+    int GetUglyNumber_Solution (int n) {
         vector<int> res = { 0, 1 };
         int a = 1, b = 1, c = 1;
-        for (int i = 2; i <= index; ++ i) {
+        for (int i = 2; i <= n; ++ i) {
             res.push_back(min(res[a] * 2, min(res[b] * 3, res[c] * 5)));
             if (res.back() == res[a] * 2) ++ a;
             if (res.back() == res[b] * 3) ++ b;
             if (res.back() == res[c] * 5) ++ c;
         }
-        return res[index];
+        return res[n];
     }
 };
 ```
@@ -839,6 +848,7 @@ public:
 ```cpp
 class Solution {
     int cnt[53];
+    
     int ch2i (char ch) {
         if ('A' <= ch && ch <= 'Z')
             return ch - 'A' + 1;
@@ -887,8 +897,8 @@ class Solution {
         return res;
     }
 public:
-    int InversePairs (vector<int> data) {
-        return merge_sort(0, (int)data.size() - 1, data);
+    int InversePairs (vector<int> a) {
+        return merge_sort(0, (int)a.size() - 1, a);
     }
 };
 ```
@@ -1509,7 +1519,7 @@ public:
     int cutRope (int n, int prev_len = 1) {
         if (n == 0) return 1;
         if (f[n] != 0) return f[n];
-        
+          
         int res = 0;
         for (int i = prev_len; i <= n; ++ i) {
             res = max(res, i * cutRope(n - i, i));
