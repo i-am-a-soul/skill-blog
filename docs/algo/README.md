@@ -1261,6 +1261,46 @@ public:
 };
 ```
 
+## `JZ49` 把字符串转换成整数
+
+[链接](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e)
+
+```cpp
+class Solution {
+    void trim (string& str) {
+        if (str.size() == 0) return;
+
+        str.erase(0, str.find_first_not_of(" "));
+        str.erase(str.find_last_not_of(" ") + 1);
+    }
+public:
+    int StrToInt(string str) {
+        trim(str);
+        for (int i = 0; i < str.size(); ++ i) {
+            if (!('0' <= str[i] && str[i] <= '9')) {
+                if (i > 0) {
+                    return 0;
+                } else if (!(str[i] == '+' || str[i] == '-')) {
+                    return 0;
+                }
+            }
+        }
+
+        int sign = 1;
+        if (str[0] == '+' || str[0] == '-') {
+            if (str[0] == '-') sign = -1;
+            str = str.substr(1);
+        }
+        int res = 0;
+        for (int i = 0; i < str.size(); ++ i) {
+            res *= 10;
+            res += str[i] - '0';
+        }
+        return sign * res;
+    }
+};
+```
+
 ## `JZ50` 数组中重复的数字
 
 [链接](https://www.nowcoder.com/practice/6fe361ede7e54db1b84adc81d09d8524)
