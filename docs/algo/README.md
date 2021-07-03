@@ -136,6 +136,30 @@ public:
 };
 ```
 
+## `JZ6` 旋转数组的最小数字
+
+[链接](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)
+
+```cpp
+class Solution {
+public:
+    int minNumberInRotateArray (vector<int> a) {
+        int l = 0, r = (int)a.size() - 1;
+        while (l < r) {
+            int mid = l + r >> 1;
+            if (a[mid] > a[r]) {
+                l = mid + 1;
+            } else if (a[mid] < a[r]) {
+                r = mid;
+            } else {
+                r = r - 1;
+            }
+        }
+        return a[l];
+    }
+};
+```
+
 ## `JZ7` 斐波那契数列
 
 [链接](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)
