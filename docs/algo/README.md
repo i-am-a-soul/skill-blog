@@ -3,7 +3,23 @@
 ## 数据结构
 
 ```cpp
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode (int x) : val(x), next(NULL) {}
+};
 
+struct TreeNode {
+    int val;
+    TreeNode *left, *right;
+    TreeNode (int x) : val(x), left(NULL), right(NULL) {}
+};
+
+struct RandomListNode {
+    int label;
+    RandomListNode *next, *random;
+    RandomListNode (int x) : label(x), next(NULL), random(NULL) {}
+};
 ```
 
 ## `JZ1` 二维数组中的查找
@@ -51,15 +67,6 @@ public:
 [链接](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)
 
 ```cpp
-/**
-*  struct ListNode {
-*        int val;
-*        struct ListNode *next;
-*        ListNode(int x) :
-*              val(x), next(NULL) {
-*        }
-*  };
-*/
 class Solution {
 public:
     vector<int> printListFromTailToHead (ListNode* head) {
@@ -80,15 +87,6 @@ public:
 [链接](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)
 
 ```cpp
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
     TreeNode* reConstructBinaryTree (vector<int> pre, vector<int> vin) {
@@ -305,13 +303,6 @@ public:
 [链接](https://www.nowcoder.com/practice/886370fe658f41b498d40fb34ae76ff9)
 
 ```cpp
-/**
- * struct ListNode {
- *	int val;
- *	struct ListNode *next;
- *	ListNode(int x) : val(x), next(nullptr) {}
- * };
- */
 class Solution {
 public:
     ListNode* FindKthToTail (ListNode* pHead, int k) {
@@ -336,14 +327,6 @@ public:
 [链接](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)
 
 ```cpp
-/*
-struct ListNode {
-	int val;
-	struct ListNode *next;
-	ListNode(int x) :
-    	val(x), next(NULL) {
-	}
-};*/
 class Solution {
 public:
     ListNode* ReverseList (ListNode* pHead) {
@@ -364,14 +347,6 @@ public:
 [链接](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)
 
 ```cpp
-/*
-struct ListNode {
-	int val;
-	struct ListNode *next;
-	ListNode(int x) :
-        val(x), next(NULL) {
-	}
-};*/
 class Solution {
     ListNode *pHead = NULL, *temp;
     void insert (ListNode* &ptr) {
@@ -411,15 +386,6 @@ public:
 [链接](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88)
 
 ```cpp
-/*
-struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-	TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-	}
-};*/
 class Solution {
     bool check (TreeNode* pRoot1, TreeNode* pRoot2) {
         if (pRoot2 == NULL) return true;
@@ -450,14 +416,6 @@ public:
 [链接](https://www.nowcoder.com/practice/a9d0ecbacef9410ca97463e4a5c83be7)
 
 ```cpp
-/**
- * struct TreeNode {
- *	int val;
- *	struct TreeNode *left;
- *	struct TreeNode *right;
- *	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- * };
- */
 class Solution {
 public:
     TreeNode* Mirror (TreeNode* pRoot) {
@@ -570,15 +528,6 @@ public:
 [链接](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701)
 
 ```cpp
-/*
-struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-	TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-	}
-};*/
 class Solution {
 public:
     vector<int> PrintFromTopToBottom (TreeNode* root) {
@@ -636,15 +585,6 @@ public:
 [链接](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca)
 
 ```cpp
-/*
-struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-	TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-	}
-};*/
 class Solution {
     vector<vector<int> > res;
     vector<int> cur_path;
@@ -674,15 +614,6 @@ public:
 [链接](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba)
 
 ```cpp
-/*
-struct RandomListNode {
-    int label;
-    struct RandomListNode *next, *random;
-    RandomListNode(int x) :
-        label(x), next(NULL), random(NULL) {
-    }
-};
-*/
 class Solution {
 public:
     RandomListNode* Clone (RandomListNode* pHead) {
@@ -711,15 +642,6 @@ public:
 [链接](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5)
 
 ```cpp
-/*
-struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-	TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-	}
-};*/
 class Solution {
     void solve (TreeNode* pRoot, TreeNode* &pHead, TreeNode* &pTail) {
         if (pRoot -> left == NULL && pRoot -> right == NULL) {
@@ -976,14 +898,6 @@ public:
 [链接](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46)
 
 ```cpp
-/*
-struct ListNode {
-	int val;
-	struct ListNode *next;
-	ListNode(int x) :
-        val(x), next(NULL) {
-	}
-};*/
 class Solution {
 public:
     ListNode* FindFirstCommonNode (ListNode* pHead1, ListNode* pHead2) {
@@ -1024,15 +938,6 @@ public:
 [链接](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b)
 
 ```cpp
-/*
-struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-	TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-	}
-};*/
 class Solution {
 public:
     int TreeDepth (TreeNode* pRoot) {
@@ -1361,15 +1266,6 @@ public:
 [链接](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4)
 
 ```cpp
-/*
-struct ListNode {
-    int val;
-    struct ListNode *next;
-    ListNode(int x) :
-        val(x), next(NULL) {
-    }
-};
-*/
 class Solution {
 public:
     ListNode* EntryNodeOfLoop(ListNode* pHead) {
@@ -1396,16 +1292,6 @@ public:
 [链接](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)
 
 ```cpp
-/*
-struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
-    TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-    }
-};
-*/
 class Solution {
     struct node {
         TreeNode* ptr;
@@ -1440,16 +1326,6 @@ public:
 [链接](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288)
 
 ```cpp
-/*
-struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
-    TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-    }
-};
-*/
 class Solution {
     struct node {
         TreeNode* ptr;
@@ -1481,16 +1357,6 @@ public:
 [链接](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a)
 
 ```cpp
-/*
-struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
-    TreeNode(int x) :
-        val(x), left(NULL), right(NULL) {
-    }
-};
-*/
 class Solution {
     #define size SiZe
     unordered_map<TreeNode*, int> size;
