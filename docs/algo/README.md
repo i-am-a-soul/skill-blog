@@ -700,6 +700,57 @@ public:
 };
 ```
 
+## `JZ26` 二叉搜索树与双向链表
+
+[链接](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5)
+
+```cpp
+/*
+struct TreeNode {
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+	TreeNode(int x) :
+        val(x), left(NULL), right(NULL) {
+	}
+};*/
+class Solution {
+    void solve (TreeNode* pRoot, TreeNode* &pHead, TreeNode* &pTail) {
+        if (pRoot -> left == NULL && pRoot -> right == NULL) {
+            pHead = pTail = pRoot;
+            return;
+        }
+
+        TreeNode *ph1, *pt1, *ph2, *pt2;
+        if (pRoot -> left != NULL) {
+            solve(pRoot -> left, ph1, pt1);
+            pRoot -> left = pt1;
+            pt1 -> right = pRoot;
+            pHead = ph1;
+        } else {
+            pHead = pRoot;
+        }
+
+        if (pRoot -> right != NULL) {
+            solve(pRoot -> right, ph2, pt2);
+            pRoot -> right = ph2;
+            ph2 -> left = pRoot;
+            pTail = pt2;
+        } else {
+            pTail = pRoot;
+        }
+    }
+public:
+    TreeNode* Convert (TreeNode* pRoot) {
+        if (pRoot == NULL) return NULL;
+
+        TreeNode *ph, *pt;
+        solve(pRoot, ph, pt);
+        return ph;
+    }
+};
+```
+
 ## `JZ27` 字符串的排列
 
 [链接](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7)
