@@ -27,7 +27,7 @@ struct RandomListNode {
 [链接](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)
 
 ```cpp
-// 时间复杂度：O(nlogn)
+// 时间复杂度：O(nlogm)
 class Solution {
 public:
     bool Find (int target, vector<vector<int> > a) {
@@ -35,6 +35,28 @@ public:
             int cnt = upper_bound(a[i].begin(), a[i].end(), target)
                 - lower_bound(a[i].begin(), a[i].end(), target);
             if (cnt >= 1) return true;
+        }
+        return false;
+    }
+};
+
+// 时间复杂度：O(n + m)
+class Solution {
+public:
+    bool Find (int target, vector<vector<int> > a) {
+        int n = a.size();
+        if (n == 0) return false;
+        int m = a[0].size();
+
+        int r = 0, c = m - 1; // 右上角
+        while (r < n && c >= 0) {
+            if (a[r][c] == target) {
+                return true;
+            } else if (a[r][c] < target) {
+                ++ r;
+            } else {
+                -- c;
+            }
         }
         return false;
     }
@@ -143,13 +165,15 @@ public:
 
 [链接](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)
 
+![](/skill-blog/img/0006.bmp)
+
 ```cpp
 class Solution {
 public:
     int minNumberInRotateArray (vector<int> a) {
         int l = 0, r = (int)a.size() - 1;
         while (l < r) {
-            int mid = l + r >> 1;
+            int mid = l + r >> 1; // mid 取不到 r
             if (a[mid] > a[r]) {
                 l = mid + 1;
             } else if (a[mid] < a[r]) {
@@ -728,6 +752,8 @@ public:
 
 [链接](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)
 
+摩尔投票法。
+
 ```cpp
 class Solution {
 public:
@@ -736,7 +762,7 @@ public:
         for (int i = 0; i < a.size(); ++ i) {
             if (cnt == 0) res = a[i];
 
-            if (res == a[i]) {
+            if (a[i] == res) {
                 ++ cnt;
             } else {
                 -- cnt;
@@ -1174,7 +1200,7 @@ public:
     int Add (int a, int b) {
         while (b != 0) {
             int carry = (a & b) << 1;
-            a ^= b;
+            a ^= b; // 不进位加法
             b = carry;
         }
         return a;
