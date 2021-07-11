@@ -7,5 +7,6 @@ module.exports = {
 		'/js/this.md',
 		'/js/闭包.md',
 		'/js/prototype链.md',
+		'/js/判断数据类型.md',
 	],
 }
