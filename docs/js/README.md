@@ -119,6 +119,15 @@ function bar () {
 bar() // bar2
 ```
 
+## 删除`DOM`节点
+
+```js
+let e = document.getElementById('to-be-removed')
+
+e.parentNode.removeChild(e)
+e = null // 释放内存
+```
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
