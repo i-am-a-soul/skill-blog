@@ -128,6 +128,23 @@ e.parentNode.removeChild(e)
 e = null // 释放内存
 ```
 
+## `cannot read property of undefined`问题解决方案
+
+1. 通过`&&`短路运算符进行可访问性嗅探
+2. 通过`||`设置默认保底值
+3. 使用`try...catch`方法
+
+```js
+let res
+try {
+    res = obj.user.post[0].comment
+} catch {
+    res = null
+}
+```
+
+4. 使用`loadsh get API`
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
