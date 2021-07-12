@@ -10,5 +10,6 @@ module.exports = {
 		'/js/判断数据类型.md',
 		'/js/实现apply与bind.md',
 		'/js/宏任务与微任务.md',
+		'/js/防抖与节流.md',
 	],
 }
