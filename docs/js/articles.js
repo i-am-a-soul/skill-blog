@@ -9,5 +9,6 @@ module.exports = {
 		'/js/prototype链.md',
 		'/js/判断数据类型.md',
 		'/js/实现apply与bind.md',
+		'/js/宏任务与微任务.md',
 	],
 }
