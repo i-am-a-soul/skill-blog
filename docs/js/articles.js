@@ -8,5 +8,6 @@ module.exports = {
 		'/js/闭包.md',
 		'/js/prototype链.md',
 		'/js/判断数据类型.md',
+		'/js/实现apply与bind.md',
 	],
 }
