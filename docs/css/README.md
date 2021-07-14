@@ -9,3 +9,7 @@
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
+## 其他
+
+- 陌生标签的`display`：`inline`
+
