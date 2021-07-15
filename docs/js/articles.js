@@ -8,7 +8,7 @@ module.exports = {
 		'/js/闭包.md',
 		'/js/prototype链.md',
 		'/js/判断数据类型.md',
-		'/js/实现apply与bind.md',
+		'/js/自己的实现.md',
 		'/js/宏任务与微任务.md',
 		'/js/防抖与节流.md',
 		'/js/浅拷贝与深拷贝.md',
