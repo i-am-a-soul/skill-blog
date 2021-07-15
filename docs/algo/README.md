@@ -1176,6 +1176,31 @@ public:
 };
 ```
 
+## `JZ46` 孩子们的游戏(圆圈中最后剩下的数)
+
+[链接](https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6)
+
+```cpp
+class Solution {
+public:
+    int LastRemaining_Solution (int n, int m) {
+        if (n == 0) return -1;
+        
+        queue<int> q;
+        for (int i = 0; i < n; ++ i) q.push(i);
+
+        while (q.size() > 1) {
+            for (int i = 1; i <= m - 1; ++ i) {
+                q.push(q.front());
+                q.pop();
+            }
+            q.pop();
+        }
+        return q.front();
+    }
+};
+```
+
 ## `JZ47` 求`1+2+3+...+n`
 
 [链接](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1)
