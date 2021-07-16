@@ -1335,6 +1335,17 @@ public:
 };
 ```
 
+## `JZ52` 正则表达式匹配
+
+[链接](https://www.nowcoder.com/practice/28970c15befb4ff3a264189087b99ad4)
+
+```js
+function match (str, pattern) {
+    const reg = new RegExp('^' + pattern + '$', 'g')
+    return reg.test(str)
+}
+```
+
 ## `JZ54` 字符流中第一个不重复的字符
 
 [链接](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720)
