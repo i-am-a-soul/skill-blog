@@ -1329,6 +1329,47 @@ public:
 };
 ```
 
+## `JZ54` 字符流中第一个不重复的字符
+
+[链接](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720)
+
+```cpp
+class Solution {
+    #define N 128
+    struct node {
+        char ch;
+        int idx;
+        int cnt;
+        bool operator < (const node& o) const {
+            return idx < o.idx;
+        }
+    };
+    node a[N];
+    int len;
+public:
+    void Insert (char ch) {
+        if (!a['a'].ch) {
+            for (int i = 0; i < N; ++ i)
+                a[i].ch = i;
+        }
+
+        for (int i = 0; i < N; ++ i) {
+            if (a[i].ch == ch) {
+                if (a[i].cnt ++ == 0) a[i].idx = ++ len;
+                break;
+            }
+        }
+    }
+    char FirstAppearingOnce () {
+        sort(a, a + N);
+        for (int i = 0; i < N; ++ i)
+            if (a[i].cnt == 1)
+                return a[i].ch;
+        return '#';
+    }
+};
+```
+
 ## `JZ55` 链表中环的入口结点
 
 [链接](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4)
