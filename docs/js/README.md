@@ -211,3 +211,4 @@ new Promise((resolve, reject) => reject('error'))
 - `debugger`。
 - 基本数据类型保存在栈空间中，引用类型保存在堆空间中。
 - ![](/skill-blog/img/0007.png)
+- 字符串的值是不可以改变的。
