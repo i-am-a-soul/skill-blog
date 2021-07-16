@@ -20,6 +20,12 @@ struct RandomListNode {
     RandomListNode *next, *random;
     RandomListNode (int x) : label(x), next(NULL), random(NULL) {}
 };
+
+function TreeNode (val) {
+    this.val = val
+    this.left = null
+    this.right = null
+}
 ```
 
 ## `JZ1` 二维数组中的查找
@@ -1412,6 +1418,41 @@ public:
         return res;
     }
 };
+```
+
+## `JZ61` 序列化二叉树
+
+[链接](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84)
+
+```js
+function Serialize (pRoot, idx = 1) {
+    if (pRoot === null) return ''
+
+    return idx + ':' + pRoot.val + '_'
+        + Serialize(pRoot.left, idx * 2)
+        + Serialize(pRoot.right, idx * 2 + 1);
+}
+function dfs (idx, h) {
+    if (!h[idx]) return null
+
+    const cur = new TreeNode(h[idx])
+    cur.left = dfs(idx * 2, h)
+    cur.right = dfs(idx * 2 + 1, h)
+
+    return cur
+}
+function Deserialize (str) {
+    const a = str.slice(0, -1)
+        .split('_')
+        .map(e => e.split(':'))
+
+    const h = {}
+    a.forEach(e => {
+        h[e[0]] = e[1]
+    })
+    
+    return dfs(1, h)
+}
 ```
 
 ## `JZ62` 二叉搜索树的第`k`个结点
