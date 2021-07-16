@@ -1355,6 +1355,41 @@ public:
 };
 ```
 
+## `JZ56` 删除链表中重复的结点
+
+[链接](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)
+
+```cpp
+class Solution {
+public:
+    ListNode* deleteDuplication (ListNode* pHead1) {
+        if (pHead1 == NULL) return NULL;
+
+        ListNode* pHead2 = new ListNode(0);
+        ListNode *p1 = pHead2, *p2 = pHead1;
+
+        while (p2 != NULL) {
+            int val = p2 -> val, cnt = 1;
+            while (p2 -> next != NULL) {
+                if (p2 -> next -> val == val) {
+                    ++ cnt;
+                    p2 = p2 -> next;
+                } else {
+                    break;
+                }
+            }
+            if (cnt == 1) {
+                p1 -> next = p2;
+                p1 = p2;
+            }
+            p2 = p2 -> next;
+        }
+        p1 -> next = NULL;
+        return pHead2 -> next;
+    }
+};
+```
+
 ## `JZ58` 对称的二叉树
 
 [链接](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb)
