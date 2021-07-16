@@ -26,6 +26,12 @@ function TreeNode (val) {
     this.left = null
     this.right = null
 }
+
+struct TreeLinkNode {
+    int val;
+    TreeLinkNode *left, *right, *next;
+    TreeLinkNode (int x) : val(x), left(NULL), right(NULL), next(NULL) {}
+};
 ```
 
 ## `JZ1` 二维数组中的查找
@@ -1427,6 +1433,33 @@ public:
         }
         p1 -> next = NULL;
         return pHead2 -> next;
+    }
+};
+```
+
+## `JZ57` 二叉树的下一个结点
+
+[链接](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e)
+
+```cpp
+class Solution {
+public:
+    TreeLinkNode* GetNext (TreeLinkNode* pNode) {
+        TreeLinkNode* ptr = pNode;
+
+        if (pNode -> right != NULL) {
+            ptr = pNode -> right;
+            while (ptr -> left != NULL)
+                ptr = ptr -> left;
+            return ptr;
+        }
+
+        while (pNode -> next != NULL) {
+            ptr = pNode -> next;
+            if (ptr -> left == pNode) return ptr;
+            pNode = pNode -> next;
+        }
+        return NULL;
     }
 };
 ```
