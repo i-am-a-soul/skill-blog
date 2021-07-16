@@ -1564,6 +1564,55 @@ public:
 };
 ```
 
+## `JZ66` 机器人的运动范围
+
+[链接](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8)
+
+```cpp
+class Solution {
+    int dirx[4] = { -1, 1, 0, 0 };
+    int diry[4] = { 0, 0, -1, 1 };
+    struct node {
+        int x, y;
+    };
+    bool mark[110][110];
+
+    int sum (int x) {
+        int res = 0;
+        while (x > 0) {
+            res += x % 10;
+            x /= 10;
+        }
+        return res;
+    }
+    bool check (int x, int y, int threshold) {
+        return sum(x) + sum(y) <= threshold;
+    }
+public:
+    int movingCount (int threshold, int n, int m) {
+        int res = 0;
+        queue<node> q;
+        q.push({ 0, 0 });
+        mark[0][0] = true;
+        while (!q.empty()) {
+            node cur = q.front();
+            q.pop();
+            ++ res;
+
+            for (int i = 0; i < 4; ++ i) {
+                int nx = cur.x + dirx[i], ny = cur.y + diry[i];
+                if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
+                if (mark[nx][ny] == true) continue;
+                if (check(nx, ny, threshold) == false) continue;
+                q.push({ nx, ny });
+                mark[nx][ny] = true;
+            }
+        }
+        return res;
+    }
+};
+```
+
 ## `JZ67` 剪绳子
 
 [链接](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)
