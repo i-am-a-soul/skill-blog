@@ -1355,6 +1355,45 @@ public:
 };
 ```
 
+## `JZ58` 对称的二叉树
+
+[链接](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb)
+
+```cpp
+class Solution {
+    TreeNode* Copy (TreeNode* pRoot) {
+        if (pRoot == NULL) return NULL;
+
+        TreeNode* cur = new TreeNode(pRoot -> val);
+        cur -> left = Copy(pRoot -> left);
+        cur -> right = Copy(pRoot -> right);
+
+        return cur;
+    }
+    void Mirror (TreeNode* pRoot) {
+        if (pRoot == NULL) return;
+
+        Mirror(pRoot -> left);
+        Mirror(pRoot -> right);
+        swap(pRoot -> left, pRoot -> right);
+    }
+    bool Check (TreeNode* pRoot1, TreeNode* pRoot2) {
+        if (pRoot1 == NULL && pRoot2 == NULL) return true;
+        if (pRoot1 == NULL || pRoot2 == NULL) return false;
+
+        if (pRoot1 -> val != pRoot2 -> val) return false;
+        return Check(pRoot1 -> left, pRoot2 -> left)
+            && Check(pRoot1 -> right, pRoot2 -> right);
+    }
+public:
+    bool isSymmetrical (TreeNode* pRoot1) {
+        TreeNode* pRoot2 = Copy(pRoot1);
+        Mirror(pRoot2);
+        return Check(pRoot1, pRoot2);
+    }
+};
+```
+
 ## `JZ59` 按之字形顺序打印二叉树
 
 [链接](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)
