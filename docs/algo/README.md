@@ -1346,6 +1346,17 @@ function match (str, pattern) {
 }
 ```
 
+## `JZ53` 表示数值的字符串
+
+[链接](https://www.nowcoder.com/practice/e69148f8528c4039ad89bb2546fd4ff8)
+
+```js
+function isNumeric (str) {
+    const reg = /^[+-]?(\d+(\.\d*)?|(\.\d+))([eE][+-]?\d+)?$/
+    return reg.test(str)
+}
+```
+
 ## `JZ54` 字符流中第一个不重复的字符
 
 [链接](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720)
