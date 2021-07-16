@@ -834,6 +834,58 @@ public:
 };
 ```
 
+## `JZ31` 整数中`1`出现的次数（从`1`到`n`整数中`1`出现的次数）
+
+[链接](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)
+
+```cpp
+class Solution {
+    int f[12][12][12];
+
+    void initialize () {
+        for (int i = 0; i <= 9; ++ i) f[1][i][i] = 1;
+
+        for (int i = 2; i <= 10; ++ i)
+        for (int j = 0; j <= 9; ++ j)
+        for (int k = 0; k <= 9; ++ k) {
+            if (k == j) f[i][j][k] += pow(10, i - 1);
+            for (int l = 0; l <= 9; ++ l)
+                f[i][j][k] += f[i - 1][l][k];
+        }
+    }
+    int count (int n, int k) {
+        if (n == 0) return k == 0 ? 1 : 0;
+
+        vector<int> a;
+        while (n > 0) {
+            a.push_back(n % 10);
+            n /= 10;
+        }
+
+        int res = 0, last = 0;
+        for (int i = a.size() - 1; i >= 0; -- i) {
+            int val = a[i];
+            for (int j = (i == a.size() - 1); j < val; ++ j)
+                res += f[i + 1][j][k];
+            
+            res += val * last * pow(10, i);
+            if (val == k) ++ last;
+
+            if (i == 0) res += last;
+        }
+        for (int i = 1; i < a.size(); ++ i)
+            for (int j = (i != 1); j <= 9; ++ j)
+                res += f[i][j][k];
+        return res;
+    }
+public:
+    int NumberOf1Between1AndN_Solution (int n) {
+        initialize();
+        return count(n, 1);
+    }
+};
+```
+
 ## `JZ32` 把数组排成最小的数
 
 [链接](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993)
