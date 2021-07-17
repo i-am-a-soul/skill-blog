@@ -26,6 +26,8 @@
 
 ## 其他
 
-- 陌生标签的`display`：`inline`
-- [box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing)
+- 陌生标签的`display`：`inline`。
+- [box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing)。
+- 选择器是从右向左解析的。
+- 伪类：状态，伪元素：位置。
 

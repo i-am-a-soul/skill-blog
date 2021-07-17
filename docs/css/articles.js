@@ -3,5 +3,6 @@ module.exports = {
         '',
 		'/css/Normalize.css.md',
 		'/css/BFC.md',
+		'/css/z-index.md',
     ],
 }
