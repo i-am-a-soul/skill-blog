@@ -188,27 +188,40 @@ console.log(/* true  */ a || true) // {}
 console.log(/* false */ false || b) // 0
 ```
 
-## `Promise.resolve`与`Promise.reject`
-
-```js
-Promise.resolve('foo')
-// 等价于
-new Promise(resolve => resolve('foo'))
-
-Promise.reject('error')
-// 等价于
-new Promise((resolve, reject) => reject('error'))
-```
-
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
+
 - `setTimeout`函数指定了**将任务添加到队列前的延时**。
+
 - 箭头函数中的`this`、`super`、`arguments`以及`new.target`这些值由外围最近一层非箭头函数决定。
+
 - 如果想让箭头函数向外返回一个对象字面量，则需要将该字面量包裹在小括号里，以将其与函数体区分开来。
+
 - 无论函数已定义的命名参数有多少，都不限制调用时传入的实际参数数量，调用时总是可以传入任意数量的参数。
+
 - 在`ES6`出现之前，一般来说只有函数作用域和全局作用域之分。
+
 - `debugger`。
+
 - 基本数据类型保存在栈空间中，引用类型保存在堆空间中。
+
 - ![](/skill-blog/img/0007.png)
+
 - 字符串的值是不可以改变的。
+
+- ```js
+  const func = () => {
+      console.log(a)
+  }
+  const a = 'a'
+  func() // a
+  
+  const func = () => {
+      console.log(a)
+  }
+  func() // ReferenceError: Cannot access 'a' before initialization
+  const a = 'a'
+  ```
+
+- 
