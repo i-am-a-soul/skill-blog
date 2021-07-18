@@ -12,9 +12,14 @@ module.exports = {
 			'/others/security/知识点.md',
         ],
 	}, {
-		title: 'Http与Https',
+		title: 'Http(s)',
         children: [
 			'/others/http&https/知识点.md',
+        ],
+	}, {
+		title: 'Git',
+        children: [
+			'/others/git/知识点.md',
         ],
 	}],
 }
