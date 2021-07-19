@@ -12,7 +12,6 @@ module.exports = {
 		'/js/宏任务与微任务.md',
 		'/js/防抖与节流.md',
 		'/js/浅拷贝与深拷贝.md',
-		'/js/继承.md',
 		'/js/柯里化.md',
 	],
 }
