@@ -1,2 +1,33 @@
 # `BFC`
 
+## `BFC`是什么
+
+`BFC`的全称为`Block Formatting Context`，翻译为块级格式化上下文。
+
+`box`：
+
+- `block box`，指`display`属性为`block`、`list-item`、`table`的元素
+- `inline box`，指`display`属性为`inline`、`inline-block`、`inline-table`的元素
+
+## 什么样的元素会创建一个`BFC`
+
+- 浮动元素（元素的`float`不是`none`）
+- 绝对定位元素（元素的`position`为`absolute`或`fixed`）
+
+- 内联块（元素具有`display: inline-block`属性）
+- 具有`overflow`且值不是`visible`的块元素
+- 根元素或其他包含根元素的元素
+- 表格单元格（元素具有`display: table-cell`，`HTML`表格单元格默认属性）
+- 表格标题（元素具有`display: table-caption`，`HTML`表格标题默认属性）
+- 含有样式属性`display: flow-root`的元素
+- 含有样式属性`column-span: all`的元素
+
+## `BFC`决定了什么
+
+- 内部的`block box`将会独占宽度，且在垂直方向上一个接一个排列
+- `block box`在垂直方向上的间距由`margin`属性决定，但是同一个`BFC`的两个相邻`block box`的`margin`会出现边距折叠现象
+- 每个`block box`在水平方向上的左边缘与`BFC`的左边缘相对齐，即使存在浮动也是如此
+- `BFC`区域不会与浮动元素重叠，而是会依次排列
+- `BFC`区域是一个独立的渲染容器，容器内的元素和`BFC`区域外的元素之间不会有任何干扰
+- 浮动元素的高度也参与`BFC`的高度计算
+
