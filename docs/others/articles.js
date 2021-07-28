@@ -13,6 +13,11 @@ module.exports = {
 			'/others/performance/window.performance API.md',
         ],
     }, {
+        title: '设计模式',
+        children: [
+			'/others/design_pattern/设计模式原则.md',
+        ],
+    }, {
 		title: '安全',
         children: [
 			'/others/security/知识点.md',
