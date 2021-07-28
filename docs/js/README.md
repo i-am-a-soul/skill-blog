@@ -230,3 +230,5 @@ console.log(/* false */ false || b) // 0
 
 - 建议减少使用`export default`导出，一方面是因为`export default`会导出整体对象结果，不利于通过`tree shaking`进行分析；另一方面是因为`export default`导出的结果可以随意命名变量，不利于团队统一管理。
 
+- `try...catch`处理异常的能力有限，对于处理运行时非异步错误是没有问题的，但却无法处理语法错误和异步错误。
+
