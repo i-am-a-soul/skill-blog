@@ -16,6 +16,7 @@ module.exports = {
         title: '设计模式',
         children: [
 			'/others/design_pattern/设计模式原则.md',
+			'/others/design_pattern/设计模式类型.md',
         ],
     }, {
 		title: '安全',
