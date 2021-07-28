@@ -26,6 +26,14 @@
 
 ## 如何解决页面动画效果卡顿问题
 
+- 一般来说，`CSS3`动画会比基于`JavaScript`实现的动画效率更高，因此会优先使用`CSS3`来实现动画。
+- 在使用`CSS3`实现动画时，要考虑开启`GPU`加速（这一点并不总是产生正面效果）。
+- 优先使用资源消耗最低的`transform`和`opacity`属性。
+- 使用`will-change`属性。
+- 独立合成层，减少绘制区域。
+- 对于只能使用`JavaScript`实现动画效果的情况，可以考虑使用`requestAnimationFrame`和`requestIdleCallback API`。
+- 批量进行样式变换，减少布局抖动。
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
