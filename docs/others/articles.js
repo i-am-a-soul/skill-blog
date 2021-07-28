@@ -7,6 +7,11 @@ module.exports = {
 			'/others/webpack/publicPath.md',
         ],
     }, {
+        title: '性能优化',
+        children: [
+			'/others/performance/性能监控指标.md',
+        ],
+    }, {
 		title: '安全',
         children: [
 			'/others/security/知识点.md',
