@@ -9,6 +9,7 @@ module.exports = {
     }, {
         title: '性能优化',
         children: [
+			'/others/performance/知识点.md',
 			'/others/performance/性能监控指标.md',
 			'/others/performance/window.performance API.md',
         ],
