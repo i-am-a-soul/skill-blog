@@ -28,6 +28,7 @@ module.exports = {
 		title: 'Http(s)',
         children: [
 			'/others/http&https/知识点.md',
+			'/others/http&https/从实时通信系统看HTTP发展.md',
         ],
 	}, {
 		title: 'Git',
