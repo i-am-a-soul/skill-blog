@@ -7,6 +7,11 @@ module.exports = {
 			'/others/webpack/publicPath.md',
         ],
     }, {
+        title: '浏览器',
+        children: [
+			'/others/browser/cookie.md',
+        ],
+    }, {
         title: '性能优化',
         children: [
 			'/others/performance/知识点.md',
