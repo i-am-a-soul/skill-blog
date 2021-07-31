@@ -34,6 +34,17 @@
 - 对于只能使用`JavaScript`实现动画效果的情况，可以考虑使用`requestAnimationFrame`和`requestIdleCallback API`。
 - 批量进行样式变换，减少布局抖动。
 
+## 横排块级元素
+
+```css
+.clearfix::after { // 父容器
+    content: '';
+    display: block;
+    clear: both;
+}
+float: left; // 子元素
+```
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
