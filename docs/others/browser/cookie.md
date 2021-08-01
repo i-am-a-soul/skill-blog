@@ -11,3 +11,4 @@
 - `Secure cookie`：只有在特定安全通道（通常指`HTTPS`）下，传输链路的请求中才会自动加入相关`cookie`。
 - `SameSite cookie`：在跨域情况下，相关`cookie`无法被请求携带，这里主要是为了防止`CSRF`攻击。
 
+![](/skill-blog/img/0020.jpg)
