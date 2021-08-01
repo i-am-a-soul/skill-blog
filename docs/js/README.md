@@ -232,3 +232,5 @@ console.log(/* false */ false || b) // 0
 
 - `try...catch`处理异常的能力有限，对于处理运行时非异步错误是没有问题的，但却无法处理语法错误和异步错误。
 
+- `setTimeout`最小的`delay`为`4`（`ms`），`setInterval`最小的`delay`为`10`（`ms`）。
+
