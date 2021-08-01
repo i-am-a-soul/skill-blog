@@ -13,5 +13,6 @@ module.exports = {
 		'/js/防抖与节流.md',
 		'/js/浅拷贝与深拷贝.md',
 		'/js/函数式.md',
+		'/js/封装localStorage.md',
 	],
 }
