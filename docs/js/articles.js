@@ -14,5 +14,6 @@ module.exports = {
 		'/js/浅拷贝与深拷贝.md',
 		'/js/函数式.md',
 		'/js/封装localStorage.md',
+		'/js/封装数据请求.md',
 	],
 }
