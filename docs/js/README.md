@@ -119,15 +119,6 @@ function bar () {
 bar() // bar2
 ```
 
-## 删除`DOM`节点
-
-```js
-let e = document.getElementById('to-be-removed')
-
-e.parentNode.removeChild(e)
-e = null // 释放内存
-```
-
 ## `cannot read property of undefined`问题解决方案
 
 1. 通过`&&`短路运算符进行可访问性嗅探
@@ -188,9 +179,13 @@ console.log(/* true  */ a || true) // {}
 console.log(/* false */ false || b) // 0
 ```
 
-## `DOMContentLoaded`与`Load`事件
+## `LHS`查询与`RHS`查询
 
-`DOMContentLoaded`指的是文档中`DOM`内容加载完毕的时间，也就是说`HTML`结构已经是完整的了。但是我们知道，很多页面都包含图片、特殊字体、视频、音频等其他资源，由于这些资源由网络请求获取，因此当`DOM`内容加载完毕时，这些资源还没有请求或渲染完成，当页面上所有资源加载完成后，`Load`事件才会被触发。
+作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。如果查找的目的是对变量进行赋值，那么就会使用`LHS`查询；如果目的是获取变量的值，就会使用`RHS`查询。
+
+`LHS`查询和`RHS`查询都会在当前执行作用域中开始，如果有需要（也就是说它们没有找到所需的标识符），就会向上级作用域继续查找目标标识符，这样每次上升一级作用域，最后抵达全局作用域，无论找到或没找到都将停止。
+
+不成功的`RHS`引用会导致抛出`ReferenceError`异常。不成功的`LHS`引用会导致自动隐式地创建一个全局变量（非严格模式下），该变量使用`LHS`引用的目标作为标识符，或者抛出`ReferenceError`异常（严格模式下）。
 
 ## 其他
 
