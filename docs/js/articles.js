@@ -6,7 +6,7 @@ module.exports = {
 		'/js/new关键字.md',
 		'/js/this.md',
 		'/js/闭包.md',
-		'/js/prototype链.md',
+		'/js/[[Prototype]]链.md',
 		'/js/判断数据类型.md',
 		'/js/自己的实现.md',
 		'/js/宏任务与微任务.md',

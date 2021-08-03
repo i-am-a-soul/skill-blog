@@ -231,3 +231,11 @@ console.log(/* false */ false || b) // 0
 
 - 变量的声明应该距离使用的地方越近越好，并最大限度地本地化。
 
+- 静默失败（`silently failed`）。
+
+- 当你给一个属性定义`getter`、`setter`或者两者都有时，这个属性会被定义为“访问描述符”（和“数据描述符”相对）。对于访问描述符来说，`JavaScript`会忽略它们的`value`和`writable`特性，取而代之的是关心`set`和`get`（还有`configurable`和`enumerable`）特性。
+
+- `in`操作符会检查属性是否在对象及其`[[Prototype]]`链中。相比之下，`hasOwnProperty`只会检查属性是否在对象自身中，不会检查`[[Prototype]]`链。
+
+- `Object.create(null)`会创建一个拥有空`[[Prototype]]`链接的对象，这些特殊的空`[[Prototype]]`对象通常被称作“字典”，它们完全不会受到原型链的干扰，因此非常适合用来存储数据。
+

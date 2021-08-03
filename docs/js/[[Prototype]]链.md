@@ -1,4 +1,4 @@
-# `[[prototype]]`链
+# `[[Prototype]]`链
 
 ```js
 // 通过实例访问原型对象
@@ -12,3 +12,4 @@ Foo.prototype
 原型链的终点：`Object.prototype`。
 
 ![](/skill-blog/img/0016.jpg)
+
