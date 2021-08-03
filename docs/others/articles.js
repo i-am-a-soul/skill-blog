@@ -42,7 +42,7 @@ module.exports = {
 		title: 'Git',
         children: [
 			'/others/git/知识点.md',
-			'/others/git/GitHub Flow、Git Flow与GitLab Flow.md',
+			'/others/git/分支管理流程.md',
         ],
 	}],
 }
