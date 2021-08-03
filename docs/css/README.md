@@ -45,6 +45,11 @@
 float: left; // 子元素
 ```
 
+## `box`
+
+- `block box`，指`display`属性为`block`、`list-item`、`table`的元素。
+- `inline box`，指`display`属性为`inline`、`inline-block`、`inline-table`的元素。
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
