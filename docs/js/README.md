@@ -229,3 +229,5 @@ console.log(/* false */ false || b) // 0
 
 - `setTimeout`最小的`delay`为`4`（`ms`），`setInterval`最小的`delay`为`10`（`ms`）。
 
+- 变量的声明应该距离使用的地方越近越好，并最大限度地本地化。
+
