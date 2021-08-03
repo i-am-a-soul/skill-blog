@@ -9,9 +9,9 @@ module.exports = {
     }, {
         title: '浏览器',
         children: [
+			'/others/browser/知识点.md',
 			'/others/browser/cookie.md',
 			'/others/browser/localStorage与sessionStorage.md',
-			'/others/browser/渲染流程.md',
         ],
     }, {
         title: '性能优化',
