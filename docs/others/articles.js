@@ -10,6 +10,8 @@ module.exports = {
         title: '浏览器',
         children: [
 			'/others/browser/cookie.md',
+			'/others/browser/localStorage与sessionStorage.md',
+			'/others/browser/渲染流程.md',
         ],
     }, {
         title: '性能优化',
@@ -40,6 +42,7 @@ module.exports = {
 		title: 'Git',
         children: [
 			'/others/git/知识点.md',
+			'/others/git/GitHub Flow、Git Flow与GitLab Flow.md',
         ],
 	}],
 }
