@@ -44,5 +44,10 @@ module.exports = {
 			'/others/git/知识点.md',
 			'/others/git/分支管理流程.md',
         ],
+	}, {
+		title: '小程序',
+        children: [
+			'/others/mini_program/知识点.md',
+        ],
 	}],
 }
