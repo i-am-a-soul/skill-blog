@@ -12,3 +12,6 @@
 - `SameSite cookie`：在跨域情况下，相关`cookie`无法被请求携带，这里主要是为了防止`CSRF`攻击。
 
 ![](/skill-blog/img/0020.jpg)
+
+在请求报文和响应报文头部各有一个与`cookie`相关的字段。请求报文中为`cookie`，响应报文中为`set-cookie`。
+
