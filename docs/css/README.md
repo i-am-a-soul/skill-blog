@@ -24,6 +24,17 @@
 
 参考资料：[细究内联元素（你一定不知道的东西）](https://zhuanlan.zhihu.com/p/31645001)
 
+## `inline-block`元素
+
+内联块级元素，其相对于内联元素的优点就是可以设置宽高。当然它也有一个缺陷，即使用`inline-block`的元素之间会出现间距。不过这个问题可以通过将父元素的字体大小`font-size`设置为`0`，然后再单独设置各个元素字体大小的方式解决。
+
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="css,result" data-slug-hash="QWvVGvW" data-user="i-am-a-soul" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/i-am-a-soul/pen/QWvVGvW">
+  inline-block</a> by Splay (<a href="https://codepen.io/i-am-a-soul">@i-am-a-soul</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
 ## 如何解决页面动画效果卡顿问题
 
 - 一般来说，`CSS3`动画会比基于`JavaScript`实现的动画效率更高，因此会优先使用`CSS3`来实现动画。
