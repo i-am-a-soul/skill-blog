@@ -48,6 +48,7 @@ module.exports = {
 		title: '小程序',
         children: [
 			'/others/mini_program/知识点.md',
+			'/others/mini_program/常见的App.md',
         ],
 	}],
 }
