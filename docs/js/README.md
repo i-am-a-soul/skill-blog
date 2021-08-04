@@ -241,3 +241,5 @@ console.log(/* false */ false || b) // 0
 
 - `Object.create(null)`会创建一个拥有空`[[Prototype]]`链接的对象，这些特殊的空`[[Prototype]]`对象通常被称作“字典”，它们完全不会受到原型链的干扰，因此非常适合用来存储数据。
 
+- `AJAX`（`Asynchronous JavaScript and XML`）。
+
