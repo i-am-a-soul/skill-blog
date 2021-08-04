@@ -33,7 +33,9 @@ console.log(a)
 
 ## 在循环中创建函数
 
-### `var + `立即调用函数表达式（`IIFE`）
+### `var + IIFE`
+
+立即执行函数表达式（`Immediately-Invoked Function Expression`，`IIFE`）
 
 ```js
 var funcs = []
