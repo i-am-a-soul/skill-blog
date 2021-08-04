@@ -8,5 +8,6 @@ module.exports = {
 		'/css/相对单位相对于谁.md',
 		'/css/响应式布局.md',
 		'/css/z-index.md',
+		'/css/重新布局与重新绘制.md',
     ],
 }

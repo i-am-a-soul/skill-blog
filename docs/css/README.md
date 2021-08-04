@@ -54,6 +54,6 @@ float: left; // 子元素
 
 - 陌生标签的`display`：`inline`。
 - [box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing)。
-- 选择器是从右向左解析的。
+- 选择器是从右向左解析的，在选择器的右边尽量使用具有唯一性的选择器，而不要使用标签选择器这类容易匹配的选择器。
 - 伪类：状态，伪元素：位置。
 
