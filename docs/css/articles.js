@@ -9,5 +9,6 @@ module.exports = {
 		'/css/响应式布局.md',
 		'/css/z-index.md',
 		'/css/重新布局与重新绘制.md',
+		'/css/选择器命名.md',
     ],
 }

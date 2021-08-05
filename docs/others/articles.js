@@ -37,6 +37,7 @@ module.exports = {
 			'/others/http&https/知识点.md',
 			'/others/http&https/从实时通信系统看HTTP发展.md',
 			'/others/http&https/跨域.md',
+			'/others/http&https/HTTPS通信流程.md',
         ],
 	}, {
 		title: 'Git',
@@ -54,6 +55,7 @@ module.exports = {
 		title: '其他',
         children: [
 			'/others/others/知识点.md',
+			'/others/others/抽象原则.md',
         ],
 	}],
 }
