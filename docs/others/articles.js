@@ -50,5 +50,10 @@ module.exports = {
 			'/others/mini_program/知识点.md',
 			'/others/mini_program/常见的App.md',
         ],
+	}, {
+		title: '其他',
+        children: [
+			'/others/others/知识点.md',
+        ],
 	}],
 }
