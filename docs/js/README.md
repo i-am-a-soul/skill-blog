@@ -189,6 +189,25 @@ console.log(/* false */ false || b) // 0
 
 不成功的`RHS`引用会导致抛出`ReferenceError`异常。不成功的`LHS`引用会导致自动隐式地创建一个全局变量（非严格模式下），该变量使用`LHS`引用的目标作为标识符，或者抛出`ReferenceError`异常（严格模式下）。
 
+## 数组方法
+
+变更方法：
+
+- `push`
+- `pop`
+- `shift`
+- `unshift`
+- `reverse`
+- `sort`
+- `splice`
+- `fill`
+
+非变更方法：
+
+- `slice`
+- `map`
+- `filter`
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
