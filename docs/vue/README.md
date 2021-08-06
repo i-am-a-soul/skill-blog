@@ -8,3 +8,6 @@
   - 通过组件跳转，如`router-link`组件。
   - 通过函数跳转，如`router.push`函数。
 
+- 事件名：`kebab-case`。
+- [风格指南](https://cn.vuejs.org/v2/style-guide/)。
+
