@@ -54,3 +54,15 @@
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
+## 圣杯布局
+
+1. 两侧区域宽度固定，中间区域宽度自适应。
+2. 中间区域最先加载。
+
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="css,result" data-slug-hash="RwVexMK" data-user="i-am-a-soul" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/i-am-a-soul/pen/RwVexMK">
+  圣杯布局</a> by Splay (<a href="https://codepen.io/i-am-a-soul">@i-am-a-soul</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
