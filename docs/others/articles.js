@@ -30,6 +30,8 @@ module.exports = {
 		title: '安全',
         children: [
 			'/others/security/知识点.md',
+			'/others/security/XSS攻击.md',
+			'/others/security/CSRF攻击.md',
         ],
 	}, {
 		title: 'Http(s)',
