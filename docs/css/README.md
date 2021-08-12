@@ -70,3 +70,9 @@ float: left; // 子元素
 
 - 外边距折叠（`Margin collapsing`）只会发生在属于同一个`BFC`的`block box`之间。
 
+- [可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element)。
+
+- [继承属性与非继承属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/inheritance)。
+
+- [`float`与`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)。
+
