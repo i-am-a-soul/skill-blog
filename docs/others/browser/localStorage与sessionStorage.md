@@ -10,3 +10,4 @@
 
 不同域下的`sessionStorage`是独立的，不能共享。
 
+![](/skill-blog/img/0041.png)
