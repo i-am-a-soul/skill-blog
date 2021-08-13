@@ -61,6 +61,16 @@ float: left; // 子元素
 - `block box`，指`display`属性为`block`、`list-item`、`table`的元素。
 - `inline box`，指`display`属性为`inline`、`inline-block`、`inline-table`的元素。
 
+## 单行文本溢出隐藏
+
+```css
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+```
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
