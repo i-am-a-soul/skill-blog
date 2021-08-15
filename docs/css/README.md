@@ -95,3 +95,5 @@ float: left; // 子元素
 
 - [`float`与`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)。
 
+- `@`规则（`at-rules`）是指用“`@`”符号开头的语法。
+
