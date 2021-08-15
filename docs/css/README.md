@@ -96,4 +96,5 @@ float: left; // 子元素
 - [`float`与`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)。
 
 - `@`规则（`at-rules`）是指用“`@`”符号开头的语法。
+- 优先级容易发展为一种“军备竞赛”。在大型项目中这一点尤为突出。通常最好让优先级尽可能低，这样当需要覆盖一些样式时，才能有选择空间。
 
