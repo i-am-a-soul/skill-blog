@@ -92,13 +92,10 @@ float: left; // 子元素
 - [box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing)。
 - 选择器是从右向左解析的，在选择器的右边尽量使用具有唯一性的选择器，而不要使用标签选择器这类容易匹配的选择器。
 - 伪类：状态，伪元素：位置。
-
 - 外边距折叠（`Margin collapsing`）只会发生在属于同一个`BFC`的`block box`之间。
-
+- 只有上下外边距会产生折叠，左右外边距不会折叠。
 - [可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element)。
-
 - [继承属性与非继承属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/inheritance)。
-
 - [`float`与`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)。
 
 - `@`规则（`at-rules`）是指用“`@`”符号开头的语法。
