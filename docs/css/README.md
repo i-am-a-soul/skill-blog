@@ -137,6 +137,20 @@ float: left; // 子元素
 
 ![](/skill-blog/img/0043.png)
 
+## 全局修改盒模型为`border-box`
+
+```css
+:root {
+    box-sizing: border-box; /* 根元素设置为 border-box */
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit; /* 告诉其他所有元素和伪元素继承其盒模型 */
+}
+```
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
