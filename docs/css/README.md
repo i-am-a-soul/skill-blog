@@ -109,6 +109,18 @@ float: left; // 子元素
 
 ![](/skill-blog/img/0042.png)
 
+## `!important`声明
+
+**样式表的来源**规则有一个例外：标记为重要（`important`）的声明。如下所示，在声明的后面、分号的前面加上`!important`，该声明就会被标记为重要的声明。
+
+`color: red !important;`
+
+标记了`!important`的声明会被当作更高优先级的样式表来源，因此总体的优先级按照由高到低排列如下所示：
+
+1. 作者样式表的`!important`
+2. 作者样式表
+3. 用户代理样式表
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
