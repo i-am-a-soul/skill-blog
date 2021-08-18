@@ -1,6 +1,6 @@
 # 图片懒加载（`IntersectionObserver`）
 
-## 效果
+## 效果（强制刷新页面后查看）
 
 <html lang="en">
 
