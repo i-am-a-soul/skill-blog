@@ -38,6 +38,7 @@ module.exports = {
 			'/others/http&https/从实时通信系统看HTTP发展.md',
 			'/others/http&https/跨域.md',
 			'/others/http&https/HTTPS通信流程.md',
+			'/others/http&https/状态码.md',
         ],
 	}, {
 		title: 'Git',
