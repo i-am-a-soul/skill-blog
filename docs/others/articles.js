@@ -19,6 +19,7 @@ module.exports = {
 			'/others/performance/知识点.md',
 			'/others/performance/性能监控指标.md',
 			'/others/performance/window.performance API.md',
+			'/others/performance/性能优化.md',
         ],
     }, {
         title: '设计模式',
