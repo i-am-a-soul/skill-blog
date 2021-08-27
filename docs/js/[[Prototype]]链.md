@@ -11,5 +11,9 @@ Foo.prototype
 
 原型链的终点：`Object.prototype`。
 
-![](/skill-blog/img/0016.jpg)
+![](/skill-blog/img/0016.png)
+
+```js
+Function.__proto__ === Function.prototype // true
+```
 
