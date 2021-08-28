@@ -234,6 +234,12 @@ a.forEach(e => {
 })
 ```
 
+## `AJAX`
+
+`AJAX`（`Asynchronous JavaScript and XML`）
+
+![](/skill-blog/img/0048.jpg)
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
@@ -285,8 +291,6 @@ a.forEach(e => {
 - `in`操作符会检查属性是否在对象及其`[[Prototype]]`链中。相比之下，`hasOwnProperty`只会检查属性是否在对象自身中，不会检查`[[Prototype]]`链。
 
 - `Object.create(null)`会创建一个拥有空`[[Prototype]]`链接的对象，这些特殊的空`[[Prototype]]`对象通常被称作“字典”，它们完全不会受到原型链的干扰，因此非常适合用来存储数据。
-
-- `AJAX`（`Asynchronous JavaScript and XML`）。
 
 - `undefined == null // true`。
 
