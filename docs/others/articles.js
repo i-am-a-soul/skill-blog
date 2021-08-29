@@ -40,6 +40,7 @@ module.exports = {
 			'/others/http&https/跨域.md',
 			'/others/http&https/HTTPS通信流程.md',
 			'/others/http&https/状态码.md',
+			'/others/http&https/头部字段.md',
         ],
 	}, {
 		title: 'Git',
