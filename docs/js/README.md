@@ -220,8 +220,10 @@ console.log(func()) // Promise {<fulfilled>: 123}
 
 ## 垃圾回收
 
-- 标记清除法
-- 引用计数法
+- 引用计数法（已废弃）
+- 标记`-`清除法
+
+![](/skill-blog/img/0050.gif)
 
 ## 跳出`forEach`循环
 
