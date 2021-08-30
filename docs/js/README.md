@@ -313,3 +313,5 @@ a.forEach(e => {
 
 - [==](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality#%E6%8F%8F%E8%BF%B0)。
 
+- `requestAnimationFrame -> Style -> Layout -> Paint`。
+

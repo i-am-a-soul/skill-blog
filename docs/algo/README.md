@@ -1698,9 +1698,9 @@ class Solution {
         if (s + 1 == k) {
             return pRoot;
         } else if (s + 1 > k) {
-            return find (pRoot -> left, k);
+            return find(pRoot -> left, k);
         } else {
-            return find (pRoot -> right, k - s - 1);
+            return find(pRoot -> right, k - s - 1);
         }
     }
 public:
