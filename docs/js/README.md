@@ -337,3 +337,5 @@ undefined == null // true
 
 - `requestAnimationFrame -> Style -> Layout -> Paint`。
 
+- [Promise.prototype.then的返回值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#%E8%BF%94%E5%9B%9E%E5%80%BC)
+
