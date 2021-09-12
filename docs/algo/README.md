@@ -622,31 +622,24 @@ public:
 
 ```cpp
 class Solution {
-    int target;
     vector<vector<int> > res;
-    vector<int> cur_path;
-    
-    bool dfs1 (TreeNode* pRoot, int sum) {
+    vector<int> path;
+
+    bool dfs (TreeNode* pRoot, int sum, int target) {
         if (pRoot == NULL) return sum == target;
 
-        cur_path.push_back(pRoot -> val);
-        bool b1 = dfs1(pRoot -> left, sum + pRoot -> val);
-        bool b2 = dfs1(pRoot -> right, sum + pRoot -> val);
-        if (b1 && b2) res.push_back(cur_path);
-        cur_path.pop_back();
+        int val = pRoot -> val;
+        path.push_back(val);
+        bool b1 = dfs(pRoot -> left, sum + val, target);
+        bool b2 = dfs(pRoot -> right, sum + val, target);
+        if (b1 && b2) res.push_back(path);
+        path.pop_back();
         return false;
-    }
-    void dfs2 (TreeNode* pRoot) {
-        if (pRoot == NULL) return;
-
-        dfs1(pRoot, 0);
-        dfs2(pRoot -> left);
-        dfs2(pRoot -> right);
     }
 public:
     vector<vector<int> > FindPath (TreeNode* pRoot, int target) {
-        this -> target = target;
-        dfs2(pRoot);
+        if (pRoot == NULL) return {};
+        dfs(pRoot, 0, target);
         sort(res.begin(), res.end());
         return res;
     }
