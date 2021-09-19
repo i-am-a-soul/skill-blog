@@ -12,6 +12,7 @@ module.exports = {
 			'/others/browser/知识点.md',
 			'/others/browser/cookie.md',
 			'/others/browser/localStorage与sessionStorage.md',
+			'/others/browser/垃圾回收.md',
         ],
     }, {
         title: '性能优化',
