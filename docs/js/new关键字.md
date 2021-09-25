@@ -48,8 +48,6 @@ const instance = new Foo()
 console.log(instance.user) // Lucas
 ```
 
-所以，如果构造函数中显式返回一个值，且返回的是一个对象（返回复杂类型），那么`this`指向这个返回的对象；如果返回的不是一个对象（返回基本类型），那么`this`仍然指向实例。
-
 ## `[[Construct]]`
 
 `JavaScript`函数有两个不同的内部方法：`[[Call]]`和`[[Construct]]`。当通过`new`关键字调用函数时，执行的是`[[Construct]]`函数，它负责创建一个通常被称作实例的新对象，然后执行函数体，将`this`绑定到实例上；如果不通过`new`关键字调用函数，则执行`[Call]]`函数，从而直接执行代码中的函数体。具有`[[Construct]]`方法的函数被统称为构造函数。
