@@ -298,18 +298,10 @@ undefined == null // true
 
 - 字符串的值是不可以改变的。
 
-- ```js
-  const func = () => {
-      console.log(a)
-  }
-  const a = 'a'
-  func() // a
-  
-  const func = () => {
-      console.log(a)
-  }
-  func() // ReferenceError: Cannot access 'a' before initialization
-  const a = 'a'
+  ```js
+  let str = 'abc'
+  str[1] = 'd'
+  console.log(str) // abc
   ```
 
 - 建议减少使用`export default`导出，一方面是因为`export default`会导出整体对象结果，不利于通过`tree shaking`进行分析；另一方面是因为`export default`导出的结果可以随意命名变量，不利于团队统一管理。
