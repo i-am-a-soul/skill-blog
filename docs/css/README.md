@@ -175,6 +175,22 @@ body * + * {
 
 - [讲清楚重排或回流、重绘](https://zhuanlan.zhihu.com/p/342371522)
 
+## 响应式布局
+
+- 传统布局
+
+- 相对单位布局
+
+- 通过媒体查询实现的响应式布局
+
+- 基于相对单位`rem`的`flexible`布局
+
+- `flex`布局
+
+- `grid`布局
+
+- 借助`JavaScript`进行布局
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
