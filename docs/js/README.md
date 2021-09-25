@@ -276,6 +276,18 @@ undefined == null // true
 
 将`AST`转换为可执行代码的过程被称为代码生成。这个过程与语言、目标平台等息息相关。
 
+## `var`、`let`与`const`
+
+```js
+var a = 1
+let b = 2
+const c = 3
+
+console.log(window.a) // 1
+console.log(window.b) // undefined
+console.log(window.c) // undefined
+```
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
