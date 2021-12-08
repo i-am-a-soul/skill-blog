@@ -338,3 +338,4 @@ console.log(window.c) // undefined
 
 - ![](/skill-blog/img/0056.png)
 
+- [可选链操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
