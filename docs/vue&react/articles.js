@@ -5,5 +5,6 @@ module.exports = {
 		'/vue&react/render.md',
 		'/vue&react/生命周期.md',
 		'/vue&react/前端路由.md',
+		'/vue&react/hook.md',
     ],
 }
