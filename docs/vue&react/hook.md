@@ -75,6 +75,24 @@ const Demo2 = () => {
 
 `useEffect - data`
 
+## `demo3`
+
+```jsx
+const Demo3 = () => {
+  const [count, setCount] = useState(0);
+
+  useState(() => {
+    const timer = setInterval(() => {
+      console.log(count); // 0 0 ...，闭包陷阱
+      setCount(myCount => myCount + 1);
+    }, 500);
+    return () => { clearInterval(timer); }
+  }, []);
+
+  return <div>demo3</div>;
+};
+```
+
 ## `useState`
 
 ```jsx
