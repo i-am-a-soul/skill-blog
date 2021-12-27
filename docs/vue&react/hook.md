@@ -75,3 +75,30 @@ const Demo2 = () => {
 
 `useEffect - data`
 
+## `useState`
+
+```jsx
+// 1. 涉及复杂计算
+/* bad */
+const initCount = props.data.reduce((acc, cur) => acc + cur, 0);
+const [count, setCount] = useState(initCount);
+/* good */
+const [count, setCount] = useState(() => props.data.reduce((acc, cur) => acc + cur, 0));
+
+// 2. 涉及复杂对象
+/* bad */
+const [state, setState] = useState({
+    key1: 'value1',
+    key2: 'value2',
+    ...
+    key100: 'value100',
+});
+/* good */
+const [state, setState] = useState(() => ({
+    key1: 'value1',
+    key2: 'value2',
+    ...
+    key100: 'value100',
+}));
+```
+
