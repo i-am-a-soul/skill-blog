@@ -288,6 +288,12 @@ console.log(window.b) // undefined
 console.log(window.c) // undefined
 ```
 
+## 用`console.table`打印数组
+
+![](/skill-blog/img/0063.png)
+
+打印对象也可以。
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
