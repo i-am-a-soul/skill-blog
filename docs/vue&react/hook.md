@@ -132,3 +132,17 @@ const [state, setState] = useState(() => ({
 const [immutable] = useState(value);
 ```
 
+## `useCallback`
+
+`useCallback`是简化版的`useMemo`，用于缓存函数的引用。
+
+```js
+const memoCallback = useCallback((...args) => {
+  // do something
+}, [...deps]);
+// 等价于
+const memoCallback = useMemo(() => (...args) => {
+  // do something
+}, [...deps]);
+```
+
