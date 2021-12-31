@@ -120,3 +120,15 @@ const [state, setState] = useState(() => ({
 }));
 ```
 
+## `useState`、`useRef`
+
+`useState`会触发组件的重新渲染，`useRef`不会。
+
+- 当维护与`UI`有关的数据时，使用`useState`
+- 当维护与`UI`无关的数据时，使用`useRef`
+- 不发生变更的数据，使用`useState`，如下：
+
+```js
+const [immutable] = useState(value);
+```
+
