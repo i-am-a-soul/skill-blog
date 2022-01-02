@@ -7,5 +7,6 @@ module.exports = {
 		'/vue&react/前端路由.md',
 		'/vue&react/hook.md',
 		'/vue&react/异步操作回收.md',
+		'/vue&react/微前端.md',
     ],
 }
