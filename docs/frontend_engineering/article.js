@@ -1,0 +1,29 @@
+module.exports = {
+    getFrontendEngineering: () => [{
+        title: '文章',
+        children: [
+            '',
+        ],
+    }, {
+        title: 'Webpack',
+        children: [
+			'/frontend_engineering/webpack/知识点.md',
+			'/frontend_engineering/webpack/module、chunk与bundle.md',
+			'/frontend_engineering/webpack/publicPath.md',
+        ],
+    }, {
+        title: 'Git',
+        children: [
+			'/frontend_engineering/git/知识点.md',
+			'/frontend_engineering/git/分支管理流程.md',
+        ],
+    }, {
+        title: '性能优化',
+        children: [
+			'/frontend_engineering/performance/知识点.md',
+			'/frontend_engineering/performance/性能监控指标.md',
+			'/frontend_engineering/performance/window.performance API.md',
+			'/frontend_engineering/performance/性能优化方法.md',
+        ],
+    }],
+};

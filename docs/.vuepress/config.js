@@ -2,6 +2,7 @@ const { getHtmlSidebar } = require('../html/articles.js')
 const { getCssSidebar } = require('../css/articles.js')
 const { getJsSidebar } = require('../js/articles.js')
 const { getFrontendFrameworkSidebar } = require('../frontend_framework/articles.js')
+const { getFrontendEngineering } = require('../frontend_engineering/article.js')
 const { getBackendSidebar } = require('../backend/articles.js')
 const { getAlgoSidebar } = require('../algo/articles.js')
 const { getOthersSidebar } = require('../others/articles.js')
@@ -50,6 +51,9 @@ module.exports = {
             text: '框架',
             link: '/frontend_framework/',
         }, {
+            text: '前端工程化',
+            link: '/frontend_engineering/',
+        }, {
             text: '后端',
             link: '/backend/',
         }, {
@@ -70,6 +74,7 @@ module.exports = {
             '/css/': getCssSidebar(),
             '/js/': getJsSidebar(),
             '/frontend_framework/': getFrontendFrameworkSidebar(),
+            '/frontend_engineering/': getFrontendEngineering(),
             '/backend/': getBackendSidebar(),
             '/algo/': getAlgoSidebar(),
             '/others/': getOthersSidebar(),

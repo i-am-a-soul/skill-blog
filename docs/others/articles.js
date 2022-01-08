@@ -1,26 +1,11 @@
 module.exports = {
     getOthersSidebar: () => [{
-        title: 'Webpack',
-        children: [
-            '',
-			'/others/webpack/module、chunk与bundle.md',
-			'/others/webpack/publicPath.md',
-        ],
-    }, {
         title: '浏览器',
         children: [
-			'/others/browser/知识点.md',
+			'',
 			'/others/browser/cookie.md',
 			'/others/browser/localStorage与sessionStorage.md',
 			'/others/browser/垃圾回收.md',
-        ],
-    }, {
-        title: '性能优化',
-        children: [
-			'/others/performance/知识点.md',
-			'/others/performance/性能监控指标.md',
-			'/others/performance/window.performance API.md',
-			'/others/performance/性能优化.md',
         ],
     }, {
         title: '设计模式',
@@ -42,12 +27,6 @@ module.exports = {
 			'/others/http&https/HTTPS通信流程.md',
 			'/others/http&https/状态码.md',
 			'/others/http&https/头部字段.md',
-        ],
-	}, {
-		title: 'Git',
-        children: [
-			'/others/git/知识点.md',
-			'/others/git/分支管理流程.md',
         ],
 	}, {
 		title: '小程序',
