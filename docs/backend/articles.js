@@ -4,6 +4,7 @@ module.exports = {
         children: [
             '',
             '/backend/错误处理逻辑.md',
+            '/backend/基于cookie的认证与基于token的认证.md',
         ],
     }, {
         title: 'Golang',

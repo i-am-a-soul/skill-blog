@@ -61,7 +61,6 @@ module.exports = {
 			'/others/others/知识点.md',
 			'/others/others/英语.md',
 			'/others/others/抽象原则.md',
-			'/others/others/基于cookie的认证与基于token的认证.md',
         ],
 	}],
 }

@@ -1,7 +1,7 @@
 const { getHtmlSidebar } = require('../html/articles.js')
 const { getCssSidebar } = require('../css/articles.js')
 const { getJsSidebar } = require('../js/articles.js')
-const { getVueAndReactSidebar } = require('../vue&react/articles.js')
+const { getFrontendFrameworkSidebar } = require('../frontend_framework/articles.js')
 const { getBackendSidebar } = require('../backend/articles.js')
 const { getAlgoSidebar } = require('../algo/articles.js')
 const { getOthersSidebar } = require('../others/articles.js')
@@ -47,8 +47,8 @@ module.exports = {
             text: 'JS',
             link: '/js/',
         }, {
-            text: 'Vue/React',
-            link: '/vue&react/',
+            text: '框架',
+            link: '/frontend_framework/',
         }, {
             text: '后端',
             link: '/backend/',
@@ -69,7 +69,7 @@ module.exports = {
             '/html/': getHtmlSidebar(),
             '/css/': getCssSidebar(),
             '/js/': getJsSidebar(),
-            '/vue&react/': getVueAndReactSidebar(),
+            '/frontend_framework/': getFrontendFrameworkSidebar(),
             '/backend/': getBackendSidebar(),
             '/algo/': getAlgoSidebar(),
             '/others/': getOthersSidebar(),
