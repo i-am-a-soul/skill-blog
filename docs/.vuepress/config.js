@@ -2,8 +2,7 @@ const { getHtmlSidebar } = require('../html/articles.js')
 const { getCssSidebar } = require('../css/articles.js')
 const { getJsSidebar } = require('../js/articles.js')
 const { getVueAndReactSidebar } = require('../vue&react/articles.js')
-const { getGoSidebar } = require('../go/articles.js')
-const { getNodeJsSidebar } = require('../nodejs/articles.js')
+const { getBackendSidebar } = require('../backend/articles.js')
 const { getAlgoSidebar } = require('../algo/articles.js')
 const { getOthersSidebar } = require('../others/articles.js')
 const moment = require('moment')
@@ -51,11 +50,8 @@ module.exports = {
             text: 'Vue/React',
             link: '/vue&react/',
         }, {
-            text: 'Go',
-            link: '/go/',
-        }, {
-            text: 'Node.js',
-            link: '/nodejs/',
+            text: '后端',
+            link: '/backend/',
         }, {
             text: '算法（面试）',
             link: '/algo/',
@@ -74,8 +70,7 @@ module.exports = {
             '/css/': getCssSidebar(),
             '/js/': getJsSidebar(),
             '/vue&react/': getVueAndReactSidebar(),
-            '/go/': getGoSidebar(),
-            '/nodejs/': getNodeJsSidebar(),
+            '/backend/': getBackendSidebar(),
             '/algo/': getAlgoSidebar(),
             '/others/': getOthersSidebar(),
         },

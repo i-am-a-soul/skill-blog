@@ -27,25 +27,3 @@ service GatewayService {
         返回值           方法名           请求参数                      method 与 uri
 ```
 
-## `GOPATH`
-
-The GOPATH environment variable specifies the location of your workspace.
-
-参考资料：
-
-- [GOPATH environment variable](https://pkg.go.dev/cmd/go#hdr-GOPATH_environment_variable)。
-
-## `GOSUMDB`、`GONOSUMDB`
-
-参考资料：
-
-- [GOSUMDB 环境变量](https://goproxy.io/zh/docs/GOSUMDB-env.html)。
-
-## 其他
-
-- [GOPROXY](https://jfrog.com/blog/why-goproxy-matters-and-which-to-pick/)。
-- `go get: installing executables with 'go get' in module mode is deprecated. Use 'go install pkg@version' instead.`
-- `go env`
-
-- [GO111MODULE](https://maelvls.dev/go111module-everywhere/)
-
