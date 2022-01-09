@@ -1,6 +1,7 @@
 const { getHtmlSidebar } = require('../html/articles.js')
 const { getCssSidebar } = require('../css/articles.js')
 const { getJsSidebar } = require('../js/articles.js')
+const { getTsSidebar } = require('../ts/articles.js')
 const { getFrontendFrameworkSidebar } = require('../frontend_framework/articles.js')
 const { getFrontendEngineering } = require('../frontend_engineering/article.js')
 const { getBackendSidebar } = require('../backend/articles.js')
@@ -48,6 +49,9 @@ module.exports = {
             text: 'JS',
             link: '/js/',
         }, {
+            text: 'TS',
+            link: '/ts/',
+        }, {
             text: '框架',
             link: '/frontend_framework/',
         }, {
@@ -73,6 +77,7 @@ module.exports = {
             '/html/': getHtmlSidebar(),
             '/css/': getCssSidebar(),
             '/js/': getJsSidebar(),
+            '/ts/': getTsSidebar(),
             '/frontend_framework/': getFrontendFrameworkSidebar(),
             '/frontend_engineering/': getFrontendEngineering(),
             '/backend/': getBackendSidebar(),
