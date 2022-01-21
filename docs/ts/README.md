@@ -4,6 +4,14 @@
 
 ![](/skill-blog/img/0059.png)
 
+## `key`未知
+
+```typescript
+interface IObj {
+  [key: string]: number;
+}
+```
+
 ## 其他
 
 - [Indexable Types](https://www.typescriptlang.org/docs/handbook/interfaces.html#indexable-types)
