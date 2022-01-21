@@ -32,3 +32,8 @@ service GatewayService {
 - `GraphQL`是聚合的，而`REST API`是离散的。使用`GraphQL`时只需要通过一个请求地址来操作数据，而`REST API`需要通过不同的请求地址来操作数据。
 - `GraphQL`是可变的，而`REST API`是相对固定的。`GraphQL`传入不同的`Schema`可以操作不同的数据；而对于`REST API`而言，一个请求地址只能指向一个（类）资源。
 
+## 其他
+
+- `gRPC`基于`HTTP 2`。
+- 通过压力测试，我们可以在大体上了解一个应用可以承受的最大`QPS`。
+
