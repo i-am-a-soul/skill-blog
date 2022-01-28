@@ -17,5 +17,11 @@ module.exports = {
         children: [
             '/backend/nodejs/知识点.md',
         ],
+    }, {
+        title: '数据库',
+        children: [
+            '/backend/database/知识点.md',
+            '/backend/database/mysql.md',
+        ],
     }],
 };
