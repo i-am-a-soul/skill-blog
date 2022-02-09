@@ -10,5 +10,6 @@ module.exports = {
 		'/css/选择器命名.md',
 		'/css/像素（px）与视口（viewport）.md',
 		'/css/隐藏元素的方式.md',
+		'/css/设计.md',
     ],
 }
