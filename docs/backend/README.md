@@ -36,4 +36,5 @@ service GatewayService {
 
 - `gRPC`基于`HTTP 2`。
 - 通过压力测试，我们可以在大体上了解一个应用可以承受的最大`QPS`。
+- `GUID`是`UUID`的一种实现。
 
