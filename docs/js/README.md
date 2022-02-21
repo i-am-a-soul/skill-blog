@@ -345,3 +345,8 @@ console.log(window.c) // undefined
 - ![](/skill-blog/img/0056.png)
 
 - [可选链操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+
+- [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+
+- `9007199254740993 == 9007199254740992; // true`
+
