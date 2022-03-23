@@ -202,19 +202,14 @@ body * + * {
 - [可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element)。
 - [继承属性与非继承属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/inheritance)。
 - [`float`与`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)。
-
 - `@`规则（`at-rules`）是指用“`@`”符号开头的语法。
 - 优先级容易发展为一种“军备竞赛”。在大型项目中这一点尤为突出。通常最好让优先级尽可能低，这样当需要覆盖一些样式时，才能有选择空间。
 - 在文档中，根节点是所有其他元素的祖先节点。根节点有一个伪类选择器（`:root`），可以用来选中它自己。这等价于类型选择器`html`，但是`:root`的优先级相当于一个类名，而不是一个标签。
 - 一个无单位的`0`只能用于长度值和百分比，比如内边距、边框和宽度等，而不能用于角度值，比如度，或者时间相关的值，比如秒。
 - 在编程中不推荐魔术数值，因为往往难以解释一个魔术数值生效的原因。如果不理解这个数值是怎么来的，就不会知道在不同的情况下会产生什么样的结果。
 - `vertical-align`声明只会影响行内元素或者`table-cell`元素。
-
 - `meta`标签告诉移动设备，你已经特意将网页适配了小屏设备。如果不加这个标签，移动浏览器会假定网页不是响应式的，并且会尝试模拟桌面浏览器，那之前的移动端设计就白做了。
-
 - 给水平方向设置的内边距比垂直方向的要多一点，因为从美学上来讲这样更让人愉快。
-
 - 状态类一般以`is-`或`has-`开头。
-
 - [层叠上下文](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。
 

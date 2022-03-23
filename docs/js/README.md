@@ -294,6 +294,16 @@ console.log(window.c) // undefined
 
 打印对象也可以。
 
+## 判断`null`或`undefined`
+
+```js
+// good
+if (x == null) {}
+
+// bad
+if (x === null || x === undefined) {}
+```
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
@@ -349,4 +359,6 @@ console.log(window.c) // undefined
 - [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
 
 - `9007199254740993 == 9007199254740992; // true`
+
+- 如果`throw`非`Error`对象，那么在代码出问题的时候无法获得调用栈等有用的信息。
 

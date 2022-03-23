@@ -23,6 +23,17 @@
 - 访问前端调试地址代理后端接口：将`http://127.0.0.1:3000`页面的请求代理到前端调试服务，然后通过调试服务向后端发起实际的接口请求。
 - 访问后端页面地址代理前端资源：访问后端服务提供的页面`url`地址，此时页面中通常加载的都不是本地调试的前端资源，因此无法联调，需要通过工具进行资源地址的代理。
 
+## 弱网
+
+```js
+const isSlowNetwork = () => {
+    if (navigator.connection) {
+        return navigator.connection.saveData || /(2|3)g/.test(navigator.connection.effectiveType);
+    }
+    return false;
+}
+```
+
 ## 其他
 
 - 约定式路由也叫文件路由，就是不需要手写配置，文件系统即路由，通过目录和文件及其命名分析出路由配置。

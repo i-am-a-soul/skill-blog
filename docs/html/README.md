@@ -16,5 +16,6 @@ e = null // 释放内存
 ## 其他
 
 - 在`img`标签上写`alt`属性。
+- `img`添加`width`和`height`，以免页面抖动。
 - [doctype](https://developer.mozilla.org/zh-CN/docs/Glossary/Doctype)。
 
