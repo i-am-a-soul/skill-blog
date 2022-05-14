@@ -16,5 +16,6 @@ module.exports = {
 		'/js/封装localStorage.md',
 		'/js/封装数据请求.md',
 		'/js/遍历对象的方法.md',
+		'/js/代码规范.md',
 	],
 }

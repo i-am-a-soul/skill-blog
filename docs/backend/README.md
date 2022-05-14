@@ -27,6 +27,9 @@ service GatewayService {
         返回值           方法名           请求参数                      method 与 uri
 ```
 
+- 通用字段的`ID`设置为`255`以避免和前面的自定义字段重复。
+- `RPC`客户端和服务端的`IDL`要保持一致。
+
 ## `GraphQL`与`REST API`的区别
 
 - `GraphQL`是聚合的，而`REST API`是离散的。使用`GraphQL`时只需要通过一个请求地址来操作数据，而`REST API`需要通过不同的请求地址来操作数据。
