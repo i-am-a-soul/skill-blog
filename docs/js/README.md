@@ -364,3 +364,9 @@ if (x === null || x === undefined) {}
 
 - 异步函数或方法的返回类型必须为全局`Promise<T>`类型
 
+- ```js
+  const a = '200px'
+  console.log(parseInt(a, 10)) // 200
+  ```
+
+- 

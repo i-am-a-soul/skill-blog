@@ -29,6 +29,7 @@ service GatewayService {
 
 - 通用字段的`ID`设置为`255`以避免和前面的自定义字段重复。
 - `RPC`客户端和服务端的`IDL`要保持一致。
+- 建议所有字段都显式声明为`required`或`optional`。
 
 ## `GraphQL`与`REST API`的区别
 

@@ -191,6 +191,23 @@ body * + * {
 
 - 借助`JavaScript`进行布局
 
+## 多语言
+
+| 汉字字数 | 英文需要的空间 |
+| :------- | -------------- |
+| 5 及以下 | 200%           |
+| 5 - 10   | 180%           |
+| 11 - 15  | 160%           |
+| 15 - 25  | 140%           |
+| 25及以上 | 130%           |
+
+## 书写顺序
+
+- `Formatting Model`（布局方式、位置）相关属性：`position`、`top`、`right`、`bottom`、`left`、`float`、`display`、`overflow`等
+- `Box Model`（尺寸）相关属性：`border`、`margin`、`padding`、`width`、`height`等
+- `Typographic`（文本）相关属性：`font`、`line-height`、`text-align`、`word-wrap`等
+- `Visual`（视觉效果）相关属性：`background`、`color`、`transition`、`list-style`等
+
 ## 其他
 
 - 陌生标签的`display`：`inline`。
