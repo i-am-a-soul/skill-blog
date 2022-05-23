@@ -19,6 +19,7 @@ module.exports = {
 			'/frontend_framework/react/知识点.md',
 			'/frontend_framework/react/hook.md',
 			'/frontend_framework/react/异步操作回收.md',
+			'/frontend_framework/react/build your own React.md',
 		],
 	}],
 };
