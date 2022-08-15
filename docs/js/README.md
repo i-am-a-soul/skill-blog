@@ -369,4 +369,4 @@ if (x === null || x === undefined) {}
   console.log(parseInt(a, 10)) // 200
   ```
 
-- 
+- `console.log(window.toString()) // [object Window]`
