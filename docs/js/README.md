@@ -370,3 +370,14 @@ if (x === null || x === undefined) {}
   ```
 
 - `console.log(window.toString()) // [object Window]`
+
+- ```js
+  const stopPropagation = (e: React.MouseEvent) => {
+    e?.stopPropagation?.();
+    e?.nativeEvent?.stopImmediatePropagation?.();
+  }
+  ```
+
+- ![](/skill-blog/img/0081.jpeg)
+
+- ![](/skill-blog/img/0082.jpeg)
