@@ -381,3 +381,12 @@ if (x === null || x === undefined) {}
 - ![](/skill-blog/img/0081.jpeg)
 
 - ![](/skill-blog/img/0082.jpeg)
+
+- ![](/skill-blog/img/0085.jpeg)
+
+- ![](/skill-blog/img/0086.jpeg)
+
+- ```js
+    console.log('' ?? 'abc'); // ''
+    console.log('' || 'abc'); // 'abc'
+  ```
