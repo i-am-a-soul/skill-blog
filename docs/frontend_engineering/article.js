@@ -11,6 +11,7 @@ module.exports = {
 			'/frontend_engineering/webpack/知识点.md',
 			'/frontend_engineering/webpack/module、chunk与bundle.md',
 			'/frontend_engineering/webpack/publicPath.md',
+			'/frontend_engineering/webpack/webpack模块化.md',
         ],
     }, {
         title: 'Git',
