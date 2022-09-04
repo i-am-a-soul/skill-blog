@@ -40,6 +40,10 @@ service GatewayService {
 
 ![](/skill-blog/img/0075.png)
 
+## `Thrift`协议栈结构
+
+![](/skill-blog/img/0087.jpg)
+
 ## 其他
 
 - `gRPC`基于`HTTP 2`。
