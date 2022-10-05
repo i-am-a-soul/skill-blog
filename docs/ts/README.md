@@ -33,4 +33,4 @@ interface IObj {
   type B = any | never; // type B = any
   ```
 
-  
+- ![](/skill-blog/img/0100.png)
