@@ -7,6 +7,7 @@ module.exports = {
             '/backend/基于cookie的认证与基于token的认证.md',
             '/backend/中间件.md',
             '/backend/SSO.md',
+            '/backend/日志.md',
         ],
     }, {
         title: 'Golang',
