@@ -52,3 +52,4 @@ const isSlowNetwork = () => {
 	- 语法转换
 	- 源码转换
 	- 通过`Polyfill`在目标环境中添加缺失的特性
+- 同一张图片（主要是位图）在不同设备中，如果显示尺寸大于原始尺寸，最终效果会有明显的颗粒感；而如果显示尺寸小于原始尺寸，又会造成带宽浪费，理想的解决方案是为不同设备提供不同分辨率、不同尺寸的图片——也就是[响应式图片](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)。

@@ -34,3 +34,5 @@ interface IObj {
   ```
 
 - ![](/skill-blog/img/0100.png)
+
+- ![](/skill-blog/img/0102.png)

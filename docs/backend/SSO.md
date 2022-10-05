@@ -4,6 +4,11 @@
 
 ![](/skill-blog/img/0090.jpg)
 
+| key  | value |
+| ---- | ----- |
+| ST   | TGC   |
+| TGC  | TGT   |
+
 ![](/skill-blog/img/0091.jpg)
 
 ![](/skill-blog/img/0092.jpg)

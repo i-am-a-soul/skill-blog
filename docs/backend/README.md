@@ -47,10 +47,20 @@ service GatewayService {
 ## 其他
 
 - `gRPC`基于`HTTP 2`。
+
 - 通过压力测试，我们可以在大体上了解一个应用可以承受的最大`QPS`。
+
 - `GUID`是`UUID`的一种实现。
+
 - ![](/skill-blog/img/0074.png)
+
 - 一个请求经过的所有服务和中间件，构成了一条调用链，包括`LB`，`HTTP`服务，`RPC`服务，消息队列等。
+
 - ![](/skill-blog/img/0076.png)
+
 - `thrift`既是`IDL`格式，又是序列化协议和传输协议。
+
+- 提倡通过通信共享内存，而不是通过共享内存实现通信
+
+  ![](/skill-blog/img/0103.jpg)
 

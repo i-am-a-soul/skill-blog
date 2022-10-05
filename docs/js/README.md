@@ -390,3 +390,11 @@ if (x === null || x === undefined) {}
     console.log('' ?? 'abc'); // ''
     console.log('' || 'abc'); // 'abc'
   ```
+
+- ```js
+  [1, 2, 3].forEach(async value => {
+      await doSomething(value) // 错误，因为 callbackfn: (value: number, index: number, array: number[]) => void
+  });
+  ```
+
+- 
