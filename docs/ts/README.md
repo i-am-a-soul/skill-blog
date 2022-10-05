@@ -17,4 +17,4 @@ interface IObj {
 - [Indexable Types](https://www.typescriptlang.org/docs/handbook/interfaces.html#indexable-types)
 - `tsc --watch code.ts`
 - `type Maybe<T> = T | null;`
-
+- ![](/skill-blog/img/0097.jpg)
