@@ -8,6 +8,7 @@ module.exports = {
             '/backend/中间件.md',
             '/backend/SSO.md',
             '/backend/日志.md',
+            '/backend/微服务.md',
         ],
     }, {
         title: 'Golang',
