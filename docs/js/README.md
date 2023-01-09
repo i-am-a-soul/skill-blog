@@ -304,6 +304,14 @@ if (x == null) {}
 if (x === null || x === undefined) {}
 ```
 
+# `fill([])`
+
+```js
+const a = new Array(3).fille([]);
+a[0].push('abc');
+console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
+```
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。

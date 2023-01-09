@@ -31,3 +31,4 @@ function getTime () {
 }
 ```
 
+![](/skill-blog/img/0105.jpg)

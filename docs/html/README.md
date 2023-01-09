@@ -19,4 +19,5 @@ e = null // 释放内存
 - `img`添加`width`和`height`，以免页面抖动。
 - [doctype](https://developer.mozilla.org/zh-CN/docs/Glossary/Doctype)。
 - `input`与`trim`
+- 通过`mouseenter`和`mouseleave`模拟`hover`
 
