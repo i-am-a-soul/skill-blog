@@ -1,5 +1,13 @@
 # 知识点
 
+## `Mobx`原理图
+
+![](/skill-blog/img/0109.jpg)
+
+## `Redux`原理图
+
+![](/skill-blog/img/0120.jpg)
+
 ## 其他
 
 - 脏数据指那些被修改过的数据。

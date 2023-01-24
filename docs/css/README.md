@@ -229,4 +229,4 @@ body * + * {
 - 给水平方向设置的内边距比垂直方向的要多一点，因为从美学上来讲这样更让人愉快。
 - 状态类一般以`is-`或`has-`开头。
 - [层叠上下文](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。
-
+- `word-break: break-word;`
