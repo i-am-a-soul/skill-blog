@@ -12,6 +12,7 @@ module.exports = {
         children: [
 			'/others/design_pattern/设计模式原则.md',
 			'/others/design_pattern/设计模式类型.md',
+			'/others/design_pattern/发布订阅模式.md',
         ],
     }, {
 		title: '安全',
