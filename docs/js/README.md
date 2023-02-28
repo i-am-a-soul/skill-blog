@@ -405,4 +405,16 @@ console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
   });
   ```
 
-- 
+- `window.crypto.randomUUID(); // 'c8379004-ea99-498c-a28f-4034dabf97ef'`
+
+- ```js
+    function foo() {
+        try {
+            return true;
+        } finally {
+            console.log('123');
+        }
+    }
+    foo(); // 123
+    ```
+

@@ -59,8 +59,27 @@ interface IObj {
 - 少数情况下，如果你确实无法预知一个值的类型，不要使用`any`，应该使用`unknown`。与`any`类似，`unknown`也表示任何值，但是`TypeScript`会要求你再做检查、细化类型。
 
 - 并集使用`|`，交集使用`&`。
+
 - `T`、`U`、`V`、`W`。
+
 - 装饰器就是在装饰目标上调用函数的一种语法。
+
 - 如果想让`TypeScript`推导的类型尽量窄一些，请使用`as const`，`const`不仅能阻止拓宽类型，还将递归把成员设为`readonly`，不管数据结构的嵌套层级有多深。
 
 - `React`有自己的一套`DOM`事件包装类型。处理`React`事件时，必须使用`React`的事件类型，不能使用常规的`DOM`事件类型。
+
+- `strictNullChecks`：When type checking, take into account `null` and `undefined`.
+
+- Don't use `{}` as a type. `{}` actually means "any non-nullish value".
+
+  - If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.
+
+  - If you want a type meaning "any value", you probably want `unknown` instead.
+
+  - If you want a type meaning "empty object", you probably want `Record<string, never>` instead.
+
+- `// @ts-expect-error`
+
+- Catch 子句变量类型注释必须为 "any" 或 "unknown" (若已指定)：[链接](https://stackoverflow.com/questions/69021040/why-catch-clause-variable-type-annotation-must-be-any
+  )
+- ![](/skill-blog/img/0121.jpg)

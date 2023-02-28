@@ -69,3 +69,5 @@ service GatewayService {
 - 追加写、随机写
 
 - 线上巡检
+
+- 数据一致性校验
