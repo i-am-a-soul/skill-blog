@@ -4,6 +4,8 @@
 
 ![](/skill-blog/img/0028.png)
 
+![](/skill-blog/img/0126.jpg)
+
 ## 渲染页面的大致流程
 
 1. 解析`HTML`标签并生成`DOM`树
@@ -11,6 +13,10 @@
 3. 将`DOM`树与`CSSOM`树合并成一个渲染树
 4. 根据渲染树来进行**布局**
 5. 对渲染树上的节点进行**绘制**
+
+## `JS`引擎和渲染引擎
+
+![](/skill-blog/img/0127.jpg)
 
 ## `defer`与`async`
 
@@ -20,6 +26,18 @@
 - `async`属性可以并发请求获取`js`，但是执行`js`的时候仍然会阻塞渲染引擎。
 
 ![](/skill-blog/img/0029.png)
+
+## 浏览器架构对比
+
+![](/skill-blog/img/0124.jpg)
+
+## 多进程架构下的分工
+
+![](/skill-blog/img/0125.jpg)
+
+## 渲染进程
+
+![](/skill-blog/img/0128.jpg)
 
 ## 其他
 
