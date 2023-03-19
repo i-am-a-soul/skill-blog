@@ -43,6 +43,10 @@ const isSlowNetwork = () => {
 
 ![](/skill-blog/img/0099.jpg)
 
+## `WebAssembly`
+
+![](/skill-blog/img/0129.png)
+
 ## 其他
 
 - 约定式路由也叫文件路由，就是不需要手写配置，文件系统即路由，通过目录和文件及其命名分析出路由配置。
@@ -57,3 +61,4 @@ const isSlowNetwork = () => {
 - `Jest`用于单元测试，`Cypress`用于`E2E`测试。
 - 跨平台渲染和虚拟`DOM`无关
 - ![](/skill-blog/img/0123.jpg)
+- ![](/skill-blog/img/0132.jpg)

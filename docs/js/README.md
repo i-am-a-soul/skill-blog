@@ -312,6 +312,10 @@ a[0].push('abc');
 console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
 ```
 
+## `ES6`和`ECMAScript 2015`的关系
+
+`ES6`是`ECMA`为`JavaScript`制定的第`6`个版本的标准，标准委员会最终决定，标准在每年的`6`月份正式发布一次，作为当年的正式版本。`ECMAScript 2015`是在`2015`年`6`月份发布的`ES6`的第一个版本，以此类推`ECMAScript 2016`是`ES6`的第二个版本，`ECMAScript 2017`是`ES6`的第三个版本。
+
 ## 其他
 
 - 在每个`script`标签中，顶层作用域即全局作用域，如果没有任何处理而直接在代码中进行变量或函数声明，就会造成全局作用域的污染。
@@ -418,3 +422,4 @@ console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
     foo(); // 123
     ```
 
+- ![](/skill-blog/img/0130.png)
