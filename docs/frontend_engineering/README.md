@@ -62,3 +62,4 @@ const isSlowNetwork = () => {
 - 跨平台渲染和虚拟`DOM`无关
 - ![](/skill-blog/img/0123.jpg)
 - ![](/skill-blog/img/0132.jpg)
+- `SSG(Static Site Generation)`是一种基于数据与模板，在构建时渲染完整静态网页的技术解决方案。
