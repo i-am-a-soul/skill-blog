@@ -3,6 +3,7 @@ module.exports = {
         title: '公共',
         children: [
             '',
+            '/backend/服务端知识地图.md',
             '/backend/错误处理逻辑.md',
             '/backend/基于cookie的认证与基于token的认证.md',
             '/backend/中间件.md',
