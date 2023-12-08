@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0adc632c","path":"/js/%E5%AE%8F%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%BE%AE%E4%BB%BB%E5%8A%A1.html","title":"宏任务与微任务","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"题目","slug":"题目","link":"#题目","children":[]}],"git":{"updatedTime":1702031425000},"filePathRelative":"js/宏任务与微任务.md"}');export{e as data};

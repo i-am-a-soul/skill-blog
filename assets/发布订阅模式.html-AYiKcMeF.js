@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-403efb6c","path":"/others/design_pattern/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F.html","title":"发布-订阅模式","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"others/design_pattern/发布订阅模式.md"}');export{t as data};

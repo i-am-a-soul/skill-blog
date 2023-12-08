@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0990b9d0","path":"/frontend_engineering/%E5%BE%AE%E5%89%8D%E7%AB%AF.html","title":"微前端","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702031425000},"filePathRelative":"frontend_engineering/微前端.md"}');export{e as data};

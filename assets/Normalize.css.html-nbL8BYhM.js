@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4992ac5c","path":"/css/Normalize.css.html","title":"Normalize.css","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"代码","slug":"代码","link":"#代码","children":[]},{"level":2,"title":"参考资料","slug":"参考资料","link":"#参考资料","children":[]}],"git":{"updatedTime":1702029164000},"filePathRelative":"css/Normalize.css.md"}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3e1debb9","path":"/js/%E5%B0%81%E8%A3%85localStorage.html","title":"封装localStorage","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"js/封装localStorage.md"}');export{e as data};

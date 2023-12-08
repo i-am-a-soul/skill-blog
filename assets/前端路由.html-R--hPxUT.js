@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-006ad7b6","path":"/frontend_framework/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1.html","title":"前端路由","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702031425000},"filePathRelative":"frontend_framework/前端路由.md"}');export{e as data};

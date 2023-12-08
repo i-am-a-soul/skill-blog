@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-d78f6e70","path":"/js/CommonJS%E4%B8%8EES6%20Module.html","title":"CommonJS与ES6 Module","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"js/CommonJS与ES6 Module.md"}');export{e as data};

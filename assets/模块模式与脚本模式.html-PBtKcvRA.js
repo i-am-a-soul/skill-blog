@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-472986f4","path":"/ts/%E6%A8%A1%E5%9D%97%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%84%9A%E6%9C%AC%E6%A8%A1%E5%BC%8F.html","title":"模块模式与脚本模式","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"ts/模块模式与脚本模式.md"}');export{t as data};

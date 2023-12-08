@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-3a7e8454","path":"/js/ES6%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E5%80%BC.html","title":"ES6中的默认参数值","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"js/ES6中的默认参数值.md"}');export{t as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-78edb7fe","path":"/frontend_engineering/performance/window.performance%20API.html","title":"window.performance API","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702031425000},"filePathRelative":"frontend_engineering/performance/window.performance API.md"}');export{e as data};

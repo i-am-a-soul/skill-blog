@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-6ed147a6","path":"/ts/%E5%8D%8F%E5%8F%98%E4%B8%8E%E9%80%86%E5%8F%98.html","title":"协变与逆变","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"ts/协变与逆变.md"}');export{t as data};

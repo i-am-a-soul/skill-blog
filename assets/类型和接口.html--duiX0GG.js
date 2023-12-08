@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-e9c20990","path":"/ts/%E7%B1%BB%E5%9E%8B%E5%92%8C%E6%8E%A5%E5%8F%A3.html","title":"类型和接口","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702031425000},"filePathRelative":"ts/类型和接口.md"}');export{t as data};

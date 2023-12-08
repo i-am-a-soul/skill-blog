@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-74bf1b94","path":"/frontend_engineering/webpack/%E6%8B%86%E5%8C%85%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE.html","title":"拆包推荐配置","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702029164000},"filePathRelative":"frontend_engineering/webpack/拆包推荐配置.md"}');export{e as data};

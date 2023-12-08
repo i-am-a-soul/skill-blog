@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-824ade98","path":"/js/%E5%87%BD%E6%95%B0%E5%BC%8F.html","title":"函数式","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"柯里化","slug":"柯里化","link":"#柯里化","children":[]},{"level":2,"title":"反柯里化","slug":"反柯里化","link":"#反柯里化","children":[]}],"git":{"updatedTime":1702029164000},"filePathRelative":"js/函数式.md"}');export{e as data};

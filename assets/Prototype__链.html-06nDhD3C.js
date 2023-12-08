@@ -1,0 +1,8 @@
+import{_ as n,o as s,c as a,e}from"./app-M6OZmubj.js";const t="/skill-blog/img/0016.png",o={},c=e(`<h1 id="prototype-链" tabindex="-1"><a class="header-anchor" href="#prototype-链" aria-hidden="true">#</a> <code>[[Prototype]]</code>链</h1><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 通过实例访问原型对象</span>
+foo<span class="token punctuation">.</span>__proto__ <span class="token comment">// （不推荐）</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
+
+<span class="token comment">// 通过构造函数访问原型对象</span>
+<span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>原型链的终点：<code>Object.prototype</code>。</p><p><img src="`+t+`" alt=""></p><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code>Function<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,5),p=[c];function i(l,r){return s(),a("div",null,p)}const u=n(o,[["render",i],["__file","Prototype__链.html.vue"]]);export{u as default};

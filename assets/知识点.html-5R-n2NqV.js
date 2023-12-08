@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-403b9ef4","path":"/others/linux/%E7%9F%A5%E8%AF%86%E7%82%B9.html","title":"知识点","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"其他","slug":"其他","link":"#其他","children":[]}],"git":{"updatedTime":1702031425000},"filePathRelative":"others/linux/知识点.md"}');export{e as data};

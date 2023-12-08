@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-cee5e0a8","path":"/js/Prototype__%E9%93%BE.html","title":"[[Prototype]]链","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1702031425000},"filePathRelative":"js/[[Prototype]]链.md"}');export{t as data};
