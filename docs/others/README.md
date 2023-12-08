@@ -2,9 +2,9 @@
 
 ## 主流浏览器内核
 
-![](/skill-blog/img/0028.png)
+![](/img/0028.png)
 
-![](/skill-blog/img/0126.jpg)
+![](/img/0126.jpg)
 
 ## 渲染页面的大致流程
 
@@ -16,7 +16,7 @@
 
 ## `JS`引擎和渲染引擎
 
-![](/skill-blog/img/0127.jpg)
+![](/img/0127.jpg)
 
 ## `defer`与`async`
 
@@ -25,19 +25,19 @@
 - `defer`属性可以将执行`js`的操作延后，一直等到`HTML`解析完成再执行。
 - `async`属性可以并发请求获取`js`，但是执行`js`的时候仍然会阻塞渲染引擎。
 
-![](/skill-blog/img/0029.png)
+![](/img/0029.png)
 
 ## 浏览器架构对比
 
-![](/skill-blog/img/0124.jpg)
+![](/img/0124.jpg)
 
 ## 多进程架构下的分工
 
-![](/skill-blog/img/0125.jpg)
+![](/img/0125.jpg)
 
 ## 渲染进程
 
-![](/skill-blog/img/0128.jpg)
+![](/img/0128.jpg)
 
 ## 其他
 

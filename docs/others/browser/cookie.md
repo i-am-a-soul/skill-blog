@@ -14,7 +14,7 @@
 
 ## 带`.`和不带`.`的区别
 
-![](/skill-blog/img/0080.png)
+![](/img/0080.png)
 
 带`.`：父`domain`和子`domain`都可以访问
 
@@ -24,7 +24,7 @@
 
 在请求报文和响应报文头部各有一个与`cookie`相关的字段。请求报文中为`cookie`，响应报文中为`set-cookie`。
 
-![](/skill-blog/img/0020.jpg)
+![](/img/0020.jpg)
 
 服务器端可以对`cookie`进行一些关键配置，以保障`cookie`的使用安全：
 

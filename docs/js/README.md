@@ -17,7 +17,7 @@ a.push(4)
 console.log(a)
 ```
 
-![](/skill-blog/img/0001.png)
+![](/img/0001.png)
 
 ```js{3}
 // 正确示例
@@ -27,7 +27,7 @@ a.push(4)
 console.log(a)
 ```
 
-![](/skill-blog/img/0002.png)
+![](/img/0002.png)
 
 对象同理。
 
@@ -233,7 +233,7 @@ a.forEach(e => {
 
 `AJAX`（`Asynchronous JavaScript and XML`）
 
-![](/skill-blog/img/0048.jpg)
+![](/img/0048.jpg)
 
 ## 模块
 
@@ -290,7 +290,7 @@ console.log(window.c) // undefined
 
 ## 用`console.table`打印数组
 
-![](/skill-blog/img/0063.png)
+![](/img/0063.png)
 
 打印对象也可以。
 
@@ -334,7 +334,7 @@ console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
 
 - 基本数据类型保存在栈空间中，引用类型保存在堆空间中，闭包变量保存在堆空间中。
 
-- ![](/skill-blog/img/0007.png)
+- ![](/img/0007.png)
 
 - 字符串的值是不可以改变的。
 
@@ -364,7 +364,7 @@ console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
 
 - [Promise.prototype.then的返回值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#%E8%BF%94%E5%9B%9E%E5%80%BC)
 
-- ![](/skill-blog/img/0056.png)
+- ![](/img/0056.png)
 
 - [可选链操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
@@ -390,13 +390,13 @@ console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
   }
   ```
 
-- ![](/skill-blog/img/0081.jpeg)
+- ![](/img/0081.jpeg)
 
-- ![](/skill-blog/img/0082.jpeg)
+- ![](/img/0082.jpeg)
 
-- ![](/skill-blog/img/0085.jpeg)
+- ![](/img/0085.jpeg)
 
-- ![](/skill-blog/img/0086.jpeg)
+- ![](/img/0086.jpeg)
 
 - ```js
     console.log('' ?? 'abc'); // ''
@@ -422,4 +422,4 @@ console.log(JSON.stringify(a)); // '[["abc"],["abc"],["abc"]]'
     foo(); // 123
     ```
 
-- ![](/skill-blog/img/0130.png)
+- ![](/img/0130.png)

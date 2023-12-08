@@ -2,7 +2,7 @@
 
 ## 获取一个库的声明文件
 
-![](/skill-blog/img/0059.png)
+![](/img/0059.png)
 
 ## `key`未知
 
@@ -39,7 +39,7 @@ interface IObj {
 
 - `type Maybe<T> = T | null;`
 
-- ![](/skill-blog/img/0097.jpg)
+- ![](/img/0097.jpg)
 
 - [lib.es5.d.ts](https://github.com/microsoft/TypeScript/blob/main/lib/lib.es5.d.ts)
 
@@ -52,9 +52,9 @@ interface IObj {
   type B = any | never; // type B = any
   ```
 
-- ![](/skill-blog/img/0100.png)
+- ![](/img/0100.png)
 
-- ![](/skill-blog/img/0102.png)
+- ![](/img/0102.png)
 
 - 少数情况下，如果你确实无法预知一个值的类型，不要使用`any`，应该使用`unknown`。与`any`类似，`unknown`也表示任何值，但是`TypeScript`会要求你再做检查、细化类型。
 
@@ -82,4 +82,4 @@ interface IObj {
 
 - Catch 子句变量类型注释必须为 "any" 或 "unknown" (若已指定)：[链接](https://stackoverflow.com/questions/69021040/why-catch-clause-variable-type-annotation-must-be-any
   )
-- ![](/skill-blog/img/0121.jpg)
+- ![](/img/0121.jpg)

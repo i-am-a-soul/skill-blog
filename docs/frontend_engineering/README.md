@@ -10,11 +10,11 @@
 
 多页应用（`Multi Page Application`，`MPA`）是指有多个独立的页面的应用，每个页面维护单独的`HTML`文档和`CSS`、`JavaScript`等静态资源，且每一次页面跳转都是由服务端返回一个新的`HTML`文档。
 
-![](/skill-blog/img/0061.png)
+![](/img/0061.png)
 
 ## 合理使用图片格式
 
-![](/skill-blog/img/0060.png)
+![](/img/0060.png)
 
 ## 本地开发场景下的两种代理方式
 
@@ -41,11 +41,11 @@ const isSlowNetwork = () => {
 
 ## 测试
 
-![](/skill-blog/img/0099.jpg)
+![](/img/0099.jpg)
 
 ## `WebAssembly`
 
-![](/skill-blog/img/0129.png)
+![](/img/0129.png)
 
 ## `Node.js`模块
 
@@ -66,6 +66,6 @@ const isSlowNetwork = () => {
 - 同一张图片（主要是位图）在不同设备中，如果显示尺寸大于原始尺寸，最终效果会有明显的颗粒感；而如果显示尺寸小于原始尺寸，又会造成带宽浪费，理想的解决方案是为不同设备提供不同分辨率、不同尺寸的图片——也就是[响应式图片](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)。
 - `Jest`用于单元测试，`Cypress`用于`E2E`测试。
 - 跨平台渲染和虚拟`DOM`无关
-- ![](/skill-blog/img/0123.jpg)
-- ![](/skill-blog/img/0132.jpg)
+- ![](/img/0123.jpg)
+- ![](/img/0132.png)
 - `SSG(Static Site Generation)`是一种基于数据与模板，在构建时渲染完整静态网页的技术解决方案。

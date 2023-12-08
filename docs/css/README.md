@@ -20,7 +20,7 @@
 </p>
 <component :is="'script'" async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></component>
 
-![](/skill-blog/img/0014.png)
+![](/img/0014.png)
 
 参考资料：[细究内联元素（你一定不知道的东西）](https://zhuanlan.zhihu.com/p/31645001)
 
@@ -107,7 +107,7 @@ float: left; // 子元素
 2. 选择器优先级：哪些选择器比另一些选择器更重要。
 3. 源码顺序：样式在样式表里的声明顺序。
 
-![](/skill-blog/img/0042.png)
+![](/img/0042.png)
 
 ## `!important`声明
 
@@ -135,7 +135,7 @@ float: left; // 子元素
 
 在不考虑`inherit`和`initial`关键字的情况下：
 
-![](/skill-blog/img/0043.png)
+![](/img/0043.png)
 
 ## 全局修改盒模型为`border-box`
 
@@ -163,7 +163,7 @@ body * + * {
 
 ## `Lines`
 
-![](/skill-blog/img/0047.jpg)
+![](/img/0047.jpg)
 
 ## 重新布局与重新绘制
 

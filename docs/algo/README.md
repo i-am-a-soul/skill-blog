@@ -150,7 +150,7 @@ public:
 
 [链接](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)
 
-![](/skill-blog/img/0005.bmp)
+![](/img/0005.png)
 
 ```cpp
 class Solution {
@@ -177,7 +177,7 @@ public:
 
 [链接](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)
 
-![](/skill-blog/img/0006.bmp)
+![](/img/0006.png)
 
 ```cpp
 class Solution {
@@ -209,7 +209,7 @@ public:
     int Fibonacci (int n) {
         if (n == 0) return 0;
         if (n == 1) return 1;
-        
+
         int res, a = 0, b = 1;
         for (int i = 2; i <= n; ++ i) {
             res = a + b;
@@ -347,7 +347,7 @@ public:
             if (p1 == NULL) return NULL;
             p1 = p1 -> next;
         }
-        
+
         while (p1 != NULL) {
             p1 = p1 -> next;
             p2 = p2 -> next;
@@ -384,7 +384,7 @@ public:
 ```cpp
 class Solution {
     ListNode *pHead = NULL, *temp;
-    
+
     void insert (ListNode* &ptr) {
         temp = ptr -> next;
         ptr -> next = pHead;
@@ -725,7 +725,7 @@ class Solution {
     vector<string> res;
     bool mark[12];
     string s;
-    
+
     void dfs (int len, const string& str) {
         if (len == str.size()) {
             res.push_back(s);
@@ -860,7 +860,7 @@ class Solution {
             int val = a[i];
             for (int j = (i == a.size() - 1); j < val; ++ j)
                 res += f[i + 1][j][k];
-            
+
             res += val * last * pow(10, i);
             if (val == k) ++ last;
 
@@ -893,7 +893,7 @@ public:
         vector<string> a;
         for (int i = 0; i < nums.size(); ++ i)
             a.push_back(to_string(nums[i]));
-        
+
         sort(a.begin(), a.end(), cmp);
         string res = "";
         for (int i = 0; i < a.size(); ++ i)
@@ -931,7 +931,7 @@ public:
 ```cpp
 class Solution {
     int cnt[53];
-    
+
     int ch2i (char ch) {
         if ('A' <= ch && ch <= 'Z')
             return ch - 'A' + 1;
@@ -1242,7 +1242,7 @@ class Solution {
 public:
     int LastRemaining_Solution (int n, int m) {
         if (n == 0) return -1;
-        
+
         queue<int> q;
         for (int i = 0; i < n; ++ i) q.push(i);
 
@@ -1364,7 +1364,7 @@ public:
         vector<int> prefix_prod = { a[0] };
         for (int i = 1; i < n; ++ i)
             prefix_prod.push_back(prefix_prod[i - 1] * a[i]);
-            
+
         vector<int> suffix_prod;
         for (int i = n - 1; i >= 0; -- i)
             suffix_prod.push_back(i == n - 1 ? a[i] : suffix_prod.back() * a[i]);
@@ -1665,7 +1665,7 @@ function Deserialize (str) {
     a.forEach(e => {
         h[e[0]] = e[1]
     })
-    
+
     return dfs(1, h)
 }
 ```
@@ -1738,7 +1738,7 @@ public:
             min_heap.push(a);
         }
     }
-    double GetMedian () { 
+    double GetMedian () {
         int cnt = max_heap.size() + min_heap.size();
         if (cnt % 2 == 0) {
             return (max_heap.top() + min_heap.top()) / 2.0;
@@ -1757,7 +1757,7 @@ class Solution {
 public:
     vector<int> maxInWindows (const vector<int>& a, unsigned int k) {
         if (k > a.size()) return {};
-        
+
         deque<int> dq;
         vector<int> res;
         for (int i = 0; i < a.size(); ++ i) {
@@ -1880,7 +1880,7 @@ public:
     int cutRope (int n, int prev_len = 1) {
         if (n == 0) return 1;
         if (f[n] != 0) return f[n]; // 记忆化
-        
+
         int res = 0;
         for (int i = prev_len; i <= n; ++ i) {
             res = max(res, i * cutRope(n - i, i));

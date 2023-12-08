@@ -2,11 +2,11 @@
 
 ## `Mobx`原理图
 
-![](/skill-blog/img/0109.jpg)
+![](/img/0109.jpg)
 
 ## `Redux`原理图
 
-![](/skill-blog/img/0120.jpg)
+![](/img/0120.jpg)
 
 ## 其他
 
@@ -14,7 +14,7 @@
 - 单页应用中一般会提供两种路由跳转方式：
   - 通过组件跳转，如`router-link`组件。
   - 通过函数跳转，如`router.push`函数。
-- ![](/skill-blog/img/0062.png)
+- ![](/img/0062.png)
 - 基础组件`/`业务组件。
 - 嵌套路由：子路由对应的组件会以`props.children`的形式嵌入父路由对应的组件。
 

@@ -1,6 +1,6 @@
 # `HTTPS`通信流程
 
-![](/skill-blog/img/0032.png)
+![](/img/0032.png)
 
 上图展示了一次`HTTPS`请求过程中经历的步骤：
 

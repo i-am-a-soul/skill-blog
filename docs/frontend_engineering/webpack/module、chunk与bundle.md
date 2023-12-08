@@ -4,8 +4,8 @@
 
 ## 单入口
 
-![](/skill-blog/img/0003.png)
+![](/img/0003.png)
 
 ## 多入口
 
-![](/skill-blog/img/0004.png)
+![](/img/0004.png)

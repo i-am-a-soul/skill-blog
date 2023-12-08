@@ -38,11 +38,11 @@ service GatewayService {
 
 ## 服务发现
 
-![](/skill-blog/img/0075.png)
+![](/img/0075.png)
 
 ## `Thrift`协议栈结构
 
-![](/skill-blog/img/0087.jpg)
+![](/img/0087.jpg)
 
 ## 其他
 
@@ -52,18 +52,18 @@ service GatewayService {
 
 - `GUID`是`UUID`的一种实现。
 
-- ![](/skill-blog/img/0074.png)
+- ![](/img/0074.png)
 
 - 一个请求经过的所有服务和中间件，构成了一条调用链，包括`LB`，`HTTP`服务，`RPC`服务，消息队列等。
 
-- ![](/skill-blog/img/0076.png)
+- ![](/img/0076.png)
 
 - `thrift`既是`IDL`格式，又是序列化协议和传输协议。
 
 - 提倡通过通信共享内存，而不是通过共享内存实现通信
 
-  ![](/skill-blog/img/0103.jpg)
-  
+  ![](/img/0103.jpg)
+
 - 镜像（`Image`）和容器（`Container`）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
 
 - 追加写、随机写

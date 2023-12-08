@@ -18,5 +18,5 @@ render (h) {
 render: h => h(App)
 ```
 
-![](/skill-blog/img/0040.png)
+![](/img/0040.png)
 

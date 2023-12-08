@@ -8,7 +8,7 @@
 
 `sessionStorage`会在浏览器关闭之后清除。
 
-![](/skill-blog/img/0041.png)
+![](/img/0041.png)
 
-![](/skill-blog/img/0049.png)
+![](/img/0049.png)
 
