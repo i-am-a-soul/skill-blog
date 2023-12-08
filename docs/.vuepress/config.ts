@@ -17,7 +17,7 @@ export default defineUserConfig({
   title: "Skill Blog",
   description: "Skill Blog",
   base: "/skill-blog/",
-  head: [["link", { rel: "icon", href: "img/favicon.png" }]],
+  head: [["link", { rel: "icon", href: "/skill-blog/img/favicon.png" }]],
   theme: defaultTheme({
     logo: "/img/logo.png",
     navbar: [
